@@ -1,0 +1,1372 @@
+# Copyright (C) 2024-2026 Turbo Addons
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: HelloTurbo 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/helloturbo\n"
+"POT-Creation-Date: 2026-08-13 10:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: helloturbo\n"
+
+#: inc/customizer/sections/global-typography.php:138
+msgid "%s Font Size (px)"
+msgstr ""
+
+#: archive.php:39
+#: index.php:38
+msgid "&laquo; Previous"
+msgstr ""
+
+#: template-parts/content.php:44
+msgid ", "
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:20
+msgid "Above Header"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:47
+#: inc/customizer/sections/single-post.php:84
+msgid "Above Title"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:255
+msgid "Activate"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:248
+msgid "Active"
+msgstr ""
+
+#: functions.php:142
+msgid "Add widgets here to appear in the sidebar."
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:36
+msgid "After Header"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:82
+msgid "Archive / Blog Sidebar"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:423
+msgid "Ask a question on the official WordPress.org support forum."
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:138
+msgid "Author Box"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:157
+msgid "Author Box Background"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:101
+#: inc/customizer/sections/footer-builder.php:49
+#: inc/customizer/sections/footer-builder.php:152
+#: inc/customizer/sections/header-builder.php:49
+#: inc/customizer/sections/header-builder.php:412
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:42
+msgid "Banner Background Color"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:61
+msgid "Banner Padding (px)"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:52
+msgid "Banner Text Color"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:37
+msgid "Before Page Title"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:86
+msgid "Behind Title (Cover)"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:383
+msgid "Below Header"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:85
+msgid "Below Title"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:349
+msgid "Blog &amp; Archive"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:180
+msgid "Blog &amp; Archive Layouts"
+msgstr ""
+
+#: inc/customizer/helpers.php:68
+msgid "Blog / Archive"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:18
+msgid "Blog Layout"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:27
+msgid "Blog Layout Style"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:330
+msgid "Body and heading fonts, plus H1-H6 sizes."
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:27
+msgid "Body Font Family"
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:51
+msgid "Body Font Size (px)"
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:37
+msgid "Body Font Weight"
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:61
+msgid "Body Line Height"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:37
+msgid "Body Text"
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:71
+msgid "Body Text Transform"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:41
+msgid "Border"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:202
+#: inc/customizer/sections/header-builder.php:127
+#: inc/customizer/sections/header-builder.php:203
+msgid "Border Color"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:47
+msgid "Border Radius (px)"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:58
+msgid "Border Width (px)"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:192
+msgid "Bottom Border (px)"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:116
+msgid "Bottom Border Width (px)"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:30
+msgid "Boxed"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:53
+msgid "Breadcrumb NavXT"
+msgstr ""
+
+#: functions.php:414
+#: inc/admin/class-helloturbo-admin.php:364
+#: inc/customizer/sections/breadcrumbs.php:15
+msgid "Breadcrumbs"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:46
+msgid "Breadcrumbs Source"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:173
+msgid "Build your header and footer with Above, Primary, and Below rows — no code required."
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:340
+msgid "Build your header with multiple rows."
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:50
+msgid "Built-in"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:23
+msgid "Button Background"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:26
+msgid "Button Border Color"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:335
+msgid "Button colors, radius, padding, and weight."
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:90
+msgid "Button Font Size (px)"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:101
+msgid "Button Font Weight"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:79
+msgid "Button Horizontal Padding (px)"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:25
+msgid "Button Hover Background"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:27
+msgid "Button Hover Border"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:24
+msgid "Button Hover Text"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:355
+msgid "Button Text"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:22
+msgid "Button Text Color"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:114
+msgid "Button Text Transform"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:364
+msgid "Button URL"
+msgstr ""
+
+#: inc/customizer/sections/global-buttons.php:69
+msgid "Button Vertical Padding (px)"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:334
+#: inc/customizer/sections/global-buttons.php:15
+msgid "Buttons"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:208
+msgid "Category"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:67
+msgid "Center"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:121
+msgid "Centered"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:33
+msgid "Centered with Background"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:181
+msgid "Choose between list, grid, and masonry layouts with full sidebar control."
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:15
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:194
+msgid "Columns"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:163
+msgid "Contained"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:15
+msgid "Container"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:40
+msgid "Container Width (px)"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:421
+msgid "Content"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:62
+msgid "Content Background"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:87
+msgid "Content Bottom Padding (px)"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:77
+msgid "Content Top Padding (px)"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:99
+msgid "Content Width"
+msgstr ""
+
+#: template-parts/content-single.php:45
+msgid "Continue reading %s"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:177
+msgid "Control colors, typography, buttons, containers, and layout from the Customizer."
+msgstr ""
+
+#: footer.php:66
+msgid "Copyright &copy; %1$s %2$s"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:108
+msgid "Copyright Bar"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:435
+msgid "Custom Text"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:73
+#: inc/customizer/sections/header-builder.php:97
+#: inc/customizer/sections/header-builder.php:427
+msgid "Custom Text / HTML"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:112
+msgid "Customize"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:119
+msgid "Customizer"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:371
+msgid "Customizer Shortcuts"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:185
+msgid "Dedicated WooCommerce sidebar and layout support out of the box."
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:51
+msgid "Default Content Layout"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:24
+msgid "Default Sidebar Position"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:417
+msgid "Documentation"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:467
+msgid "Dropdown"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:209
+msgid "e.g. \"Category:\", \"Tag:\", \"Author:\" before the title."
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:29
+msgid "Enable Above Header"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:365
+msgid "Enable and style breadcrumbs."
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:392
+msgid "Enable Below Header"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:23
+msgid "Enable Breadcrumbs"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:87
+msgid "Enable Comments on Pages"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:27
+msgid "Enable Footer Widgets Area"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:213
+msgid "Enable Sticky Header"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:114
+msgid "Enable Sticky Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:223
+msgid "Enable Transparent Header"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:97
+msgid "Excerpt"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:107
+msgid "Excerpt Word Length"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:71
+msgid "Featured Image"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:80
+msgid "Featured Image Position"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:43
+msgid "Featured Image Position (List)"
+msgstr ""
+
+#: functions.php:154
+msgid "First footer widget area."
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:70
+msgid "Font Size (px)"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:344
+#: inc/customizer/helpers.php:63
+msgid "Footer Builder"
+msgstr ""
+
+#: functions.php:61
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:152
+msgid "Footer Widget 1"
+msgstr ""
+
+#: functions.php:164
+msgid "Footer Widget 2"
+msgstr ""
+
+#: functions.php:176
+msgid "Footer Widget 3"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:18
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:98
+msgid "Full Content"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:468
+msgid "Full Screen"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:164
+#: inc/customizer/sections/single-post.php:100
+msgid "Full Width"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:29
+msgid "Full Width / Contained"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:31
+msgid "Full Width / Padded"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:57
+#: inc/customizer/sections/page-layout.php:30
+msgid "Full Width / Stretched"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:54
+#: inc/customizer/sections/single-post.php:32
+msgid "Full-width Banner"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:352
+msgid "Get Started"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:424
+msgid "Get Support"
+msgstr ""
+
+#: inc/customizer/helpers.php:53
+msgid "Global"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:324
+msgid "Global Colors"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:176
+msgid "Global Design Controls"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:73
+msgid "Grid Gap (px)"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:32
+msgid "Grid – 2 Columns"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:33
+msgid "Grid – 3 Columns"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:34
+msgid "Grid – 4 Columns"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:498
+msgid "Hamburger Icon Color"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:172
+msgid "Header &amp; Footer Builder"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:183
+msgid "Header Background"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:339
+#: inc/customizer/helpers.php:58
+msgid "Header Builder"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:172
+msgid "Header Height (px)"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:145
+msgid "Header Layout"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:159
+msgid "Header Width"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:36
+msgid "Heading"
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:85
+msgid "Heading Font Family"
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:95
+msgid "Heading Font Weight"
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:121
+msgid "Heading Line Height"
+msgstr ""
+
+#: inc/customizer/sections/global-typography.php:108
+msgid "Heading Text Transform"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:38
+#: inc/customizer/sections/header-builder.php:401
+msgid "Height (px)"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:56
+#: inc/admin/class-helloturbo-admin.php:57
+#: inc/admin/class-helloturbo-admin.php:107
+msgid "HelloTurbo"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:164
+msgid "HelloTurbo is a lightweight, fast, and fully customizable WordPress theme built for speed and flexibility. It works with the block editor, Elementor, and all major page builders."
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:117
+msgid "HelloTurbo sections"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:199
+msgid "HelloTurbo works best with the following plugins. Click Install to install a plugin from the WordPress.org directory — the button uses WordPress own installer and only runs when you click it."
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:120
+#: inc/admin/class-helloturbo-admin.php:411
+msgid "Help &amp; Support"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:49
+#: inc/customizer/sections/single-post.php:87
+msgid "Hidden"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:120
+msgid "Hide on Blog / Posts Page"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:111
+msgid "Hide on Homepage"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:129
+msgid "Hide on Single Posts"
+msgstr ""
+
+#: functions.php:415
+msgid "Home"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:428
+msgid "If you like the theme, please leave a review."
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:57
+msgid "Image Aspect Ratio"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:95
+msgid "Image Width"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:199
+msgid "Infinite Scroll"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:53
+#: inc/customizer/sections/single-post.php:31
+msgid "Inline (inside content)"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:38
+msgid "Inside Title Banner"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:264
+msgid "Install"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:266
+msgid "Install manually"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:257
+msgid "Installed"
+msgstr ""
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: template-parts/content-none.php:23
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:372
+msgid "Jump straight to the section you want to customize."
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:117
+msgid "Layout"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:429
+msgid "Leave a Review"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:66
+#: inc/customizer/sections/sidebar.php:56
+#: inc/customizer/sections/sidebar.php:72
+#: inc/customizer/sections/sidebar.php:88
+#: inc/customizer/sections/sidebar.php:104
+msgid "Left"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:122
+msgid "Left & Right"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:131
+msgid "Left / Center Text"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:48
+msgid "Left of Content"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:68
+msgid "Left Section Content"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:83
+msgid "Left Section Text"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:29
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:39
+msgid "Light Background"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:91
+#: inc/customizer/sections/footer-builder.php:69
+#: inc/customizer/sections/footer-builder.php:172
+#: inc/customizer/sections/global-colors.php:63
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:79
+#: inc/customizer/sections/footer-builder.php:182
+#: inc/customizer/sections/global-colors.php:64
+msgid "Link Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:31
+msgid "List"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:350
+msgid "List, grid, and masonry layouts."
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:198
+msgid "Load More Button"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:150
+msgid "Logo Center – Menu Below"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:149
+msgid "Logo Left – Menu Right"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:35
+msgid "Masonry – 3 Columns"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:74
+#: inc/customizer/sections/header-builder.php:98
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:286
+msgid "Menu Active Color"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:233
+msgid "Menu Font Size (px)"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:243
+msgid "Menu Font Weight"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:151
+msgid "Menu Left – Logo Right"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:266
+msgid "Menu Link Color"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:276
+msgid "Menu Link Hover Color"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:253
+msgid "Menu Text Transform"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:38
+msgid "Meta / Muted"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:453
+msgid "Mobile Breakpoint (px)"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:444
+msgid "Mobile Header"
+msgstr ""
+
+#: functions.php:62
+msgid "Mobile Menu"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:478
+msgid "Mobile Menu Background"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:488
+msgid "Mobile Menu Link Color"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:463
+msgid "Mobile Menu Style"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:56
+#: inc/customizer/sections/page-layout.php:29
+msgid "Narrow"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:66
+msgid "Narrow Content Width (px)"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:412
+msgid "Need help? Here are the best places to start."
+msgstr ""
+
+#: archive.php:40
+#: index.php:39
+msgid "Next &raquo;"
+msgstr ""
+
+#: single.php:24
+msgid "Next:"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:30
+#: inc/customizer/sections/sidebar.php:57
+#: inc/customizer/sections/sidebar.php:73
+#: inc/customizer/sections/sidebar.php:89
+#: inc/customizer/sections/sidebar.php:105
+msgid "No Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:72
+#: inc/customizer/sections/header-builder.php:96
+#: inc/customizer/sections/header-builder.php:425
+msgid "None"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:99
+msgid "None (Title Only)"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:28
+msgid "Normal"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:55
+msgid "Normal (with container)"
+msgstr ""
+
+#: template-parts/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:36
+msgid "Number of Columns"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:184
+msgid "Number of Posts"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:469
+msgid "Off Canvas (Sidebar)"
+msgstr ""
+
+#: comments.php:25
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:380
+msgid "Open"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:65
+msgid "Original"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:24
+msgid "Page Content Layout"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:15
+msgid "Page Layout"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:196
+msgid "Page Numbers"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:62
+msgid "Page Title Alignment"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:49
+msgid "Page Title Style"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:50
+msgid "Pages Sidebar"
+msgstr ""
+
+#: template-parts/content-page.php:24
+#: template-parts/content-single.php:52
+msgid "Pages:"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:183
+msgid "Pagination"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:192
+msgid "Pagination Style"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:32
+msgid "Position"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:93
+msgid "Post Content"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:83
+msgid "Post Content & Meta"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:108
+msgid "Post Meta"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:217
+msgid "Post Navigation"
+msgstr ""
+
+#: archive.php:34
+#: index.php:33
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:138
+msgid "Powered by HelloTurbo"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:197
+msgid "Previous / Next"
+msgstr ""
+
+#: single.php:23
+msgid "Previous:"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:34
+msgid "Primary"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:136
+msgid "Primary Header"
+msgstr ""
+
+#: functions.php:60
+#: header.php:53
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:52
+msgid "Rank Math"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:427
+msgid "Rate HelloTurbo"
+msgstr ""
+
+#: functions.php:349
+msgid "Read More &raquo;"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:128
+msgid "Read More Text"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:418
+msgid "Read the setup and customization guides."
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:220
+msgid "Recommended"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:198
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:166
+msgid "Related Posts"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:204
+msgid "Relation By"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:220
+msgid "Required"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:68
+#: inc/customizer/sections/sidebar.php:55
+#: inc/customizer/sections/sidebar.php:71
+#: inc/customizer/sections/sidebar.php:87
+#: inc/customizer/sections/sidebar.php:103
+msgid "Right"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:92
+msgid "Right Section Content"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:142
+#: inc/customizer/sections/header-builder.php:107
+msgid "Right Section Text"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:28
+msgid "Right Sidebar"
+msgstr ""
+
+#: functions.php:432
+msgid "Search Results"
+msgstr ""
+
+#: search.php:23
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:39
+msgid "Search results navigation"
+msgstr ""
+
+#: functions.php:166
+msgid "Second footer widget area."
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:35
+msgid "Secondary"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:426
+msgid "Secondary Menu"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:61
+msgid "Separator Character"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:325
+msgid "Set your site-wide color palette."
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:208
+msgid "Show Archive Title Prefix"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:138
+#: inc/customizer/sections/single-post.php:114
+msgid "Show Author"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:147
+msgid "Show Author Box"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:116
+msgid "Show Categories"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:156
+msgid "Show Category"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:165
+msgid "Show Comment Count"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:118
+msgid "Show Comments Count"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:147
+#: inc/customizer/sections/single-post.php:115
+msgid "Show Date"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:77
+msgid "Show Featured Image on Pages"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:222
+msgid "Show Footer Menu in Bar"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:346
+msgid "Show Header CTA Button"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:120
+msgid "Show Last Updated Date"
+msgstr ""
+
+#: inc/customizer/sections/page-layout.php:39
+msgid "Show Page Title"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:226
+msgid "Show Previous / Next Navigation"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:118
+msgid "Show Read More Link"
+msgstr ""
+
+#: inc/customizer/sections/blog-archive.php:174
+#: inc/customizer/sections/single-post.php:119
+msgid "Show Reading Time"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:175
+msgid "Show Related Posts"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:374
+msgid "Show Search Icon"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:232
+msgid "Show Social Icons"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:336
+msgid "Show Submenu Border"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:117
+msgid "Show Tags"
+msgstr ""
+
+#: functions.php:140
+#: inc/admin/class-helloturbo-admin.php:359
+#: inc/customizer/sections/sidebar.php:15
+msgid "Sidebar"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:360
+msgid "Sidebar position per content type."
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:39
+msgid "Sidebar Width (%)"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:354
+#: inc/customizer/helpers.php:73
+msgid "Single Post"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:66
+msgid "Single Post Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:61
+msgid "Site Background"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:113
+msgid "Site Editor"
+msgstr ""
+
+#: inc/customizer/sections/global-container.php:25
+msgid "Site Layout"
+msgstr ""
+
+#: functions.php:258
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:75
+#: inc/customizer/sections/header-builder.php:99
+msgid "Social Icons"
+msgstr ""
+
+#: template-parts/content-none.php:20
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:166
+msgid "Start Customizing"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:297
+msgid "Submenu Background"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:327
+msgid "Submenu Hover Background"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:307
+msgid "Submenu Link Color"
+msgstr ""
+
+#: inc/customizer/sections/header-builder.php:317
+msgid "Submenu Link Hover"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:42
+msgid "Subtle Border"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:422
+msgid "Support Forums"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:209
+msgid "Tag"
+msgstr ""
+
+#: template-parts/content-single.php:63
+msgid "Tags"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:81
+#: inc/customizer/sections/footer-builder.php:59
+#: inc/customizer/sections/footer-builder.php:162
+#: inc/customizer/sections/header-builder.php:59
+msgid "Text Color"
+msgstr ""
+
+#: functions.php:178
+msgid "Third footer widget area."
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:18
+msgid "Title Area"
+msgstr ""
+
+#: inc/customizer/sections/single-post.php:27
+msgid "Title Layout"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:355
+msgid "Title, featured image, meta, and related posts."
+msgstr ""
+
+#: header.php:54
+msgid "Toggle menu"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:191
+msgid "Top Border (px)"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:329
+#: inc/customizer/sections/global-typography.php:15
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:54
+#: inc/customizer/sections/sidebar.php:70
+#: inc/customizer/sections/sidebar.php:86
+#: inc/customizer/sections/sidebar.php:102
+msgid "Use Default"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:132
+msgid "Use {site_title}, {year} as dynamic tags."
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:108
+msgid "Version %s"
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:98
+#: inc/customizer/sections/footer-builder.php:211
+msgid "Vertical Padding (px)"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:419
+msgid "View Docs"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:118
+msgid "Welcome"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:163
+msgid "Welcome to HelloTurbo"
+msgstr ""
+
+#: inc/customizer/sections/global-colors.php:40
+msgid "White"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:345
+msgid "Widget areas and the copyright bar."
+msgstr ""
+
+#: inc/customizer/sections/footer-builder.php:89
+msgid "Widget Title Color"
+msgstr ""
+
+#: inc/admin/class-helloturbo-admin.php:184
+msgid "WooCommerce Ready"
+msgstr ""
+
+#: inc/customizer/sections/sidebar.php:98
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/breadcrumbs.php:51
+msgid "Yoast SEO"
+msgstr ""
+
+#: comments.php:31
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/content-single.php:61
+msgctxt "tag separator"
+msgid ", "
+msgstr ""
+

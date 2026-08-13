@@ -1,0 +1,9 @@
+# armada:start
+/armada/
+/.opencode/
+/opencode.json
+# armada:end
+
+# Dev tooling (not part of the WordPress theme)
+/AGENTS.md
+/OpenSpace/

@@ -1,0 +1,769 @@
+/**
+ * Turbo Theme — Lightweight base styles.
+ * All colors/sizes come from CSS custom properties set via Customizer.
+ */
+
+/* === Reset / Base === */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--turbo-font-body, system-ui, sans-serif);
+    font-size: var(--turbo-body-size, 16px);
+    font-weight: var(--turbo-body-weight, 400);
+    line-height: var(--turbo-body-lh, 1.65);
+    color: var(--turbo-text-color, #1f2937);
+    background: var(--turbo-site-bg, #ffffff);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--turbo-font-heading, var(--turbo-font-body));
+    font-weight: var(--turbo-heading-weight, 700);
+    line-height: var(--turbo-heading-lh, 1.3);
+    color: var(--turbo-heading-color, #111827);
+    margin: 0 0 0.5em;
+}
+
+h1 { font-size: var(--turbo-h1-size, 40px); }
+h2 { font-size: var(--turbo-h2-size, 32px); }
+h3 { font-size: var(--turbo-h3-size, 26px); }
+h4 { font-size: var(--turbo-h4-size, 22px); }
+h5 { font-size: var(--turbo-h5-size, 18px); }
+h6 { font-size: var(--turbo-h6-size, 16px); }
+
+a {
+    color: var(--turbo-link, #2563eb);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover, a:focus {
+    color: var(--turbo-link-hover, #1e40af);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p { margin: 0 0 1em; }
+
+/* === Container === */
+.turbo-container {
+    max-width: var(--turbo-container, 1200px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === Skip Link === */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 5px;
+    z-index: 999999;
+    padding: 8px 16px;
+    background: var(--turbo-primary);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.skip-link:focus {
+    left: 5px;
+}
+
+/* === Header === */
+.turbo-header {
+    background: var(--turbo-header-bg, #ffffff);
+    position: relative;
+    z-index: 100;
+}
+
+.turbo-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--turbo-header-height, 70px);
+}
+
+.turbo-site-branding {
+    flex-shrink: 0;
+}
+
+.turbo-site-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--turbo-heading-color);
+    text-decoration: none;
+}
+
+.turbo-site-title:hover {
+    color: var(--turbo-primary);
+}
+
+.turbo-site-description {
+    font-size: 13px;
+    color: var(--turbo-meta-color, #6b7280);
+    margin: 2px 0 0;
+}
+
+/* === Navigation === */
+.turbo-nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+}
+
+.turbo-nav-menu li {
+    position: relative;
+}
+
+.turbo-nav-menu > li > a {
+    display: block;
+    padding: 8px 14px;
+    color: var(--turbo-menu-color, #1f2937);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.turbo-nav-menu > li > a:hover,
+.turbo-nav-menu > li.current-menu-item > a,
+.turbo-nav-menu > li.current-menu-ancestor > a {
+    color: var(--turbo-menu-hover, var(--turbo-primary));
+}
+
+/* Submenu */
+.turbo-nav-menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #fff;
+    border: 1px solid var(--turbo-border, #f3f4f6);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+    z-index: 100;
+}
+
+.turbo-nav-menu li.submenu-open > .sub-menu,
+.turbo-nav-menu li:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.turbo-nav-menu .sub-menu a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #374151;
+    transition: background 0.15s, color 0.15s;
+}
+
+.turbo-nav-menu .sub-menu a:hover {
+    background: var(--turbo-light-bg, #f9fafb);
+    color: var(--turbo-primary);
+}
+
+/* Nested submenus */
+.turbo-nav-menu .sub-menu .sub-menu {
+    top: -6px;
+    left: 100%;
+}
+
+/* Submenu toggle arrow */
+.turbo-submenu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: var(--turbo-meta-color);
+    vertical-align: middle;
+}
+
+/* === Mobile Menu Toggle === */
+.turbo-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.turbo-hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--turbo-heading-color, #111827);
+    position: relative;
+    transition: background 0.2s;
+}
+
+.turbo-hamburger::before,
+.turbo-hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: inherit;
+    transition: transform 0.3s;
+}
+
+.turbo-hamburger::before { top: -7px; }
+.turbo-hamburger::after { top: 7px; }
+
+/* Animated hamburger -> X */
+.turbo-menu-toggle[aria-expanded="true"] .turbo-hamburger {
+    background: transparent;
+}
+
+.turbo-menu-toggle[aria-expanded="true"] .turbo-hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+    background: var(--turbo-heading-color);
+}
+
+.turbo-menu-toggle[aria-expanded="true"] .turbo-hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background: var(--turbo-heading-color);
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 992px) {
+    .turbo-menu-toggle {
+        display: block;
+    }
+
+    .turbo-main-navigation .turbo-nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid var(--turbo-border);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .turbo-main-navigation.is-open .turbo-nav-menu {
+        display: flex;
+    }
+
+    .turbo-nav-menu > li > a {
+        padding: 12px 20px;
+    }
+
+    .turbo-nav-menu .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding-left: 20px;
+        display: none;
+    }
+
+    .turbo-nav-menu li.submenu-open > .sub-menu {
+        display: block;
+    }
+
+    .turbo-submenu-toggle {
+        display: inline-block;
+    }
+}
+
+/* === Above Header Bar === */
+.turbo-above-header {
+    display: none; /* Shown via dynamic CSS when enabled */
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 0 20px;
+}
+
+.turbo-above-header.is-enabled {
+    display: flex;
+}
+
+/* === Content Area === */
+.turbo-site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.turbo-site-content {
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.turbo-main-content {
+    min-height: 300px;
+}
+
+/* Sidebar layout */
+.turbo-has-sidebar #content > .turbo-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.turbo-has-sidebar .turbo-main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.turbo-has-sidebar .turbo-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.turbo-has-sidebar.turbo-sidebar-left #content > .turbo-container {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .turbo-has-sidebar #content > .turbo-container {
+        flex-direction: column;
+    }
+    .turbo-has-sidebar .turbo-sidebar {
+        width: 100%;
+    }
+}
+
+/* Full width (Elementor pages) */
+.turbo-elementor-page .turbo-site-content {
+    padding: 0;
+}
+
+.turbo-elementor-page .turbo-container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.turbo-elementor-fullwidth {
+    width: 100%;
+    max-width: 100%;
+}
+
+.turbo-full-width {
+    max-width: 100%;
+}
+
+/* === Post Cards (Blog Loop) === */
+.turbo-posts-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.turbo-post-card {
+    border: 1px solid var(--turbo-border, #f3f4f6);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.turbo-post-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.turbo-post-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.turbo-post-content {
+    padding: 20px;
+}
+
+.turbo-entry-title {
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+.turbo-entry-title a {
+    color: var(--turbo-heading-color);
+}
+
+.turbo-entry-title a:hover {
+    color: var(--turbo-primary);
+}
+
+.turbo-entry-meta {
+    font-size: 13px;
+    color: var(--turbo-meta-color, #6b7280);
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.turbo-entry-summary {
+    font-size: 14px;
+    color: var(--turbo-text-color);
+    line-height: 1.6;
+}
+
+.turbo-entry-footer {
+    font-size: 12px;
+    color: var(--turbo-meta-color);
+    margin-top: 10px;
+}
+
+/* === Single Post === */
+.turbo-single-post .turbo-entry-title {
+    font-size: var(--turbo-h1-size, 36px);
+}
+
+.turbo-featured-image {
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.turbo-featured-image img {
+    width: 100%;
+}
+
+/* === Footer === */
+.turbo-footer {
+    background: var(--turbo-light-bg, #f9fafb);
+    border-top: 1px solid var(--turbo-border, #e5e7eb);
+}
+
+.turbo-footer-widgets {
+    padding: 60px 0;
+}
+
+.turbo-footer-widgets .turbo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.turbo-footer-widgets .widget-title {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.turbo-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 20px 0;
+    border-top: 1px solid var(--turbo-border, #e5e7eb);
+    font-size: 14px;
+    color: var(--turbo-meta-color, #6b7280);
+    text-align: center;
+}
+
+.turbo-footer-copyright {
+    text-align: center;
+}
+
+.turbo-footer-copyright a {
+    color: var(--turbo-link, #2563eb);
+}
+
+.turbo-footer-sep {
+    color: var(--turbo-border, #e5e7eb);
+}
+
+.turbo-footer-menu {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0 0 10px;
+    padding: 0;
+    justify-content: center;
+}
+
+.turbo-footer-menu a {
+    font-size: 13px;
+}
+
+/* === Pagination === */
+.turbo-pagination {
+    margin-top: 30px;
+}
+
+.turbo-pagination .nav-links {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.turbo-pagination .page-numbers {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid var(--turbo-border);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--turbo-text-color);
+    transition: all 0.2s;
+}
+
+.turbo-pagination .page-numbers.current,
+.turbo-pagination .page-numbers:hover {
+    background: var(--turbo-primary);
+    border-color: var(--turbo-primary);
+    color: #fff;
+}
+
+/* === Buttons (global style from Customizer) === */
+.wp-block-button__link,
+button,
+input[type="submit"],
+.turbo-btn-theme {
+    display: inline-block;
+    padding: var(--turbo-btn-padding, 12px 24px);
+    font-size: var(--turbo-btn-font-size, 15px);
+    font-weight: var(--turbo-btn-weight, 500);
+    color: var(--turbo-btn-color, #ffffff);
+    background: var(--turbo-btn-bg, var(--turbo-primary));
+    border: none;
+    border-radius: var(--turbo-btn-radius, 4px);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.wp-block-button__link:hover,
+button:hover,
+input[type="submit"]:hover {
+    background: var(--turbo-btn-hover-bg, var(--turbo-secondary));
+    color: var(--turbo-btn-hover-color, #ffffff);
+}
+
+/* === Widgets === */
+.widget {
+    margin-bottom: 24px;
+}
+
+.widget-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--turbo-border);
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--turbo-border-subtle, #e5e7eb);
+}
+
+.widget li:last-child {
+    border-bottom: none;
+}
+
+/* === Sticky Header === */
+.turbo-header.is-stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    animation: turboSlideDown 0.3s;
+}
+
+@keyframes turboSlideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* === Search Form === */
+.turbo-header-search-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: #fff;
+    border: 1px solid var(--turbo-border);
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 101;
+}
+
+.turbo-header-search-form.is-visible {
+    display: block;
+}
+
+.turbo-header-search-form input[type="search"] {
+    border: 1px solid var(--turbo-border);
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 240px;
+}
+
+/* === Breadcrumbs === */
+.turbo-breadcrumbs {
+    padding: 12px 0;
+    font-size: 13px;
+    color: var(--turbo-meta-color);
+}
+
+.turbo-breadcrumbs a {
+    color: var(--turbo-link);
+}
+
+.turbo-breadcrumbs .separator {
+    margin: 0 6px;
+    opacity: 0.6;
+}
+
+/* === Comments === */
+.turbo-comments-area {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--turbo-border);
+}
+
+.turbo-comments-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.turbo-comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* === Screen Reader Text === */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+/* === WP Alignments === */
+.alignwide {
+    margin-left: -60px;
+    margin-right: -60px;
+    max-width: calc(100% + 120px);
+}
+
+.alignfull {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    max-width: 100vw;
+    width: 100vw;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* === WordPress Required CSS Classes === */
+.wp-caption {
+    max-width: 100%;
+    margin-bottom: 1em;
+}
+
+.wp-caption-text {
+    font-size: 13px;
+    color: var(--turbo-meta-color, #6b7280);
+    text-align: center;
+    padding: 5px 0;
+}
+
+.sticky {
+    /* Sticky posts styling */
+    border-left: 3px solid var(--turbo-primary, #2563eb);
+    padding-left: 16px;
+}
+
+.gallery-caption {
+    font-size: 13px;
+    color: var(--turbo-meta-color, #6b7280);
+}
+
+.bypostauthor {
+    /* Author comment highlight */
+}
+
+.bypostauthor > .comment-body {
+    border-left: 3px solid var(--turbo-primary, #2563eb);
+    padding-left: 12px;
+}

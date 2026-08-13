@@ -1,0 +1,230 @@
+/* HelloTurbo Admin Dashboard */
+
+.helloturbo-dashboard {
+	max-width: 1120px;
+	margin: 20px 20px 0 0;
+	color: #1f2937;
+}
+
+.helloturbo-dashboard__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 24px 28px;
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 10px;
+	margin-bottom: 16px;
+}
+
+.helloturbo-dashboard__brand {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.helloturbo-dashboard__logo {
+	width: 48px;
+	height: 48px;
+	font-size: 48px;
+	color: #2563eb;
+}
+
+.helloturbo-dashboard__title {
+	margin: 0 0 2px;
+	font-size: 24px;
+	line-height: 1.2;
+	color: #111827;
+}
+
+.helloturbo-dashboard__version {
+	margin: 0;
+	color: #6b7280;
+	font-size: 13px;
+}
+
+.helloturbo-dashboard__actions {
+	display: flex;
+	gap: 10px;
+	flex-shrink: 0;
+}
+
+.helloturbo-dashboard__tabs {
+	display: flex;
+	gap: 4px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.helloturbo-dashboard__tab {
+	display: inline-block;
+	padding: 12px 18px;
+	margin-bottom: -1px;
+	text-decoration: none;
+	color: #4b5563;
+	font-weight: 500;
+	border: 1px solid transparent;
+	border-bottom: none;
+	border-radius: 8px 8px 0 0;
+}
+
+.helloturbo-dashboard__tab:hover {
+	color: #2563eb;
+}
+
+.helloturbo-dashboard__tab.is-active {
+	background: #ffffff;
+	border-color: #e5e7eb;
+	color: #111827;
+	border-bottom: 1px solid #ffffff;
+}
+
+.helloturbo-dashboard__content {
+	display: block;
+}
+
+.helloturbo-card {
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 10px;
+	padding: 24px 28px;
+	margin-bottom: 16px;
+}
+
+.helloturbo-card h2 {
+	margin-top: 0;
+	color: #111827;
+}
+
+.helloturbo-card h3 {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 0;
+	color: #111827;
+}
+
+.helloturbo-card h3 .dashicons {
+	color: #2563eb;
+}
+
+.helloturbo-card p {
+	color: #4b5563;
+}
+
+.helloturbo-dashboard__quick {
+	display: flex;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.helloturbo-dashboard__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 16px;
+}
+
+.helloturbo-card--link .button {
+	margin-top: 4px;
+}
+
+/* Recommended plugins list */
+
+.helloturbo-plugin-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.helloturbo-plugin {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 10px;
+	padding: 18px 22px;
+}
+
+.helloturbo-plugin__icon {
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+	color: #2563eb;
+	flex-shrink: 0;
+}
+
+.helloturbo-plugin__body {
+	flex: 1;
+	min-width: 0;
+}
+
+.helloturbo-plugin__title-row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.helloturbo-plugin__name {
+	margin: 0;
+	color: #111827;
+	font-size: 16px;
+}
+
+.helloturbo-plugin__badge {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.6;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.helloturbo-plugin__badge.is-required {
+	background: #fee2e2;
+	color: #b91c1c;
+}
+
+.helloturbo-plugin__badge.is-recommended {
+	background: #e0e7ff;
+	color: #4338ca;
+}
+
+.helloturbo-plugin__description {
+	margin: 6px 0 0;
+	color: #6b7280;
+}
+
+.helloturbo-plugin__action {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+}
+
+.helloturbo-plugin__active {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: #16a34a;
+	font-weight: 600;
+}
+
+.helloturbo-plugin__active .dashicons {
+	color: #16a34a;
+}
+
+@media (max-width: 782px) {
+	.helloturbo-dashboard__header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.helloturbo-plugin {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

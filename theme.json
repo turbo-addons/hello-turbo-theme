@@ -1,0 +1,140 @@
+{
+    "version": 2,
+    "settings": {
+        "appearanceTools": true,
+        "layout": {
+            "contentSize": "800px",
+            "wideSize": "1200px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "slug": "primary",
+                    "color": "#2563eb",
+                    "name": "Primary"
+                },
+                {
+                    "slug": "secondary",
+                    "color": "#1e40af",
+                    "name": "Secondary"
+                },
+                {
+                    "slug": "foreground",
+                    "color": "#1f2937",
+                    "name": "Foreground"
+                },
+                {
+                    "slug": "background",
+                    "color": "#ffffff",
+                    "name": "Background"
+                },
+                {
+                    "slug": "light-gray",
+                    "color": "#f9fafb",
+                    "name": "Light Gray"
+                },
+                {
+                    "slug": "dark",
+                    "color": "#111827",
+                    "name": "Dark"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif",
+                    "slug": "system",
+                    "name": "System Default"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "slug": "small",
+                    "size": "14px",
+                    "name": "Small"
+                },
+                {
+                    "slug": "medium",
+                    "size": "16px",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "large",
+                    "size": "20px",
+                    "name": "Large"
+                },
+                {
+                    "slug": "x-large",
+                    "size": "28px",
+                    "name": "Extra Large"
+                },
+                {
+                    "slug": "xx-large",
+                    "size": "40px",
+                    "name": "Huge"
+                }
+            ]
+        },
+        "spacing": {
+            "units": [
+                "px",
+                "em",
+                "rem",
+                "%",
+                "vw",
+                "vh"
+            ]
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "#ffffff",
+            "text": "#1f2937"
+        },
+        "typography": {
+            "fontFamily": "system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "1.65"
+        },
+        "elements": {
+            "link": {
+                "color": {
+                    "text": "#2563eb"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "#1e40af"
+                    }
+                }
+            },
+            "heading": {
+                "color": {
+                    "text": "#111827"
+                },
+                "typography": {
+                    "fontWeight": "700",
+                    "lineHeight": "1.3"
+                }
+            },
+            "button": {
+                "color": {
+                    "background": "#2563eb",
+                    "text": "#ffffff"
+                },
+                "typography": {
+                    "fontSize": "15px",
+                    "fontWeight": "500"
+                },
+                "border": {
+                    "radius": "4px"
+                },
+                ":hover": {
+                    "color": {
+                        "background": "#1e40af"
+                    }
+                }
+            }
+        }
+    }
+}
