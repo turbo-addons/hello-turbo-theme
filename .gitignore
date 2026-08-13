@@ -1,9 +1,7 @@
-# armada:start
-/armada/
-/.opencode/
-/opencode.json
-# armada:end
+# Build artifacts
+*.zip
 
 # Dev tooling (not part of the WordPress theme)
 /AGENTS.md
 /OpenSpace/
+/.opencode/
