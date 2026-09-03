@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 				printf(
 					/* translators: 1: comment count, 2: post title */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $turbo_comment_count, 'comments title', 'helloturbo' ) ),
-					number_format_i18n( $turbo_comment_count ),
+					esc_html( number_format_i18n( $turbo_comment_count ) ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			}

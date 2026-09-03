@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content">
+<main id="primary" class="turbo-main-content" tabindex="-1">
 	<?php
 	while ( have_posts() ) :
 		the_post();

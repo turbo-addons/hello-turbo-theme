@@ -26,4 +26,5 @@ require_once TURBO_THEME_DIR . '/inc/customizer/sections/blog-archive.php';
 require_once TURBO_THEME_DIR . '/inc/customizer/sections/single-post.php';
 require_once TURBO_THEME_DIR . '/inc/customizer/sections/page-layout.php';
 require_once TURBO_THEME_DIR . '/inc/customizer/sections/breadcrumbs.php';
+require_once TURBO_THEME_DIR . '/inc/customizer/sections/social-icons.php';
 require_once TURBO_THEME_DIR . '/inc/customizer/output.php';

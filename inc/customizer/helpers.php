@@ -47,31 +47,48 @@ function turbo_get_font_stack( $key ) {
 
 /**
  * Register panels used across sections.
+ *
+ * @param WP_Customize_Manager $wp_customize Customizer manager instance.
  */
 function turbo_register_customizer_panels( $wp_customize ) {
-	$wp_customize->add_panel( 'turbo_global', array(
-		'title'    => __( 'Global', 'helloturbo' ),
-		'priority' => 20,
-	) );
+	$wp_customize->add_panel(
+		'turbo_global',
+		array(
+			'title'    => __( 'Global', 'helloturbo' ),
+			'priority' => 20,
+		)
+	);
 
-	$wp_customize->add_panel( 'turbo_header_builder', array(
-		'title'    => __( 'Header Builder', 'helloturbo' ),
-		'priority' => 25,
-	) );
+	$wp_customize->add_panel(
+		'turbo_header_builder',
+		array(
+			'title'    => __( 'Header Builder', 'helloturbo' ),
+			'priority' => 25,
+		)
+	);
 
-	$wp_customize->add_panel( 'turbo_footer_builder', array(
-		'title'    => __( 'Footer Builder', 'helloturbo' ),
-		'priority' => 26,
-	) );
+	$wp_customize->add_panel(
+		'turbo_footer_builder',
+		array(
+			'title'    => __( 'Footer Builder', 'helloturbo' ),
+			'priority' => 26,
+		)
+	);
 
-	$wp_customize->add_panel( 'turbo_blog', array(
-		'title'    => __( 'Blog / Archive', 'helloturbo' ),
-		'priority' => 30,
-	) );
+	$wp_customize->add_panel(
+		'turbo_blog',
+		array(
+			'title'    => __( 'Blog / Archive', 'helloturbo' ),
+			'priority' => 30,
+		)
+	);
 
-	$wp_customize->add_panel( 'turbo_single_post', array(
-		'title'    => __( 'Single Post', 'helloturbo' ),
-		'priority' => 31,
-	) );
+	$wp_customize->add_panel(
+		'turbo_single_post',
+		array(
+			'title'    => __( 'Single Post', 'helloturbo' ),
+			'priority' => 31,
+		)
+	);
 }
 add_action( 'customize_register', 'turbo_register_customizer_panels', 5 );

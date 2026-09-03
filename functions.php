@@ -15,30 +15,6 @@ define( 'TURBO_THEME_DIR', get_template_directory() );
 define( 'TURBO_THEME_URI', get_template_directory_uri() );
 
 /**
- * On theme activation: redirect to Turbo Theme dashboard.
- */
-function turbo_theme_on_activation() {
-	// Set a flag to redirect to dashboard on first activation.
-	set_transient( 'turbo_theme_activation_redirect', true, 60 );
-}
-add_action( 'after_switch_theme', 'turbo_theme_on_activation' );
-
-/**
- * Redirect to Turbo Theme dashboard on first activation.
- */
-function turbo_theme_activation_redirect() {
-	if ( get_transient( 'turbo_theme_activation_redirect' ) ) {
-		delete_transient( 'turbo_theme_activation_redirect' );
-
-		if ( ! isset( $_GET['activate-multi'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			wp_safe_redirect( admin_url( 'admin.php?page=helloturbo' ) );
-			exit;
-		}
-	}
-}
-add_action( 'admin_init', 'turbo_theme_activation_redirect' );
-
-/**
  * Theme setup.
  */
 function turbo_theme_setup() {
@@ -57,9 +33,11 @@ function turbo_theme_setup() {
 	// Register navigation menus.
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary Menu', 'helloturbo' ),
-			'footer'  => esc_html__( 'Footer Menu', 'helloturbo' ),
-			'mobile'  => esc_html__( 'Mobile Menu', 'helloturbo' ),
+			'primary'      => esc_html__( 'Primary Menu', 'helloturbo' ),
+			'secondary'    => esc_html__( 'Secondary Menu', 'helloturbo' ),
+			'above-header' => esc_html__( 'Above Header Menu', 'helloturbo' ),
+			'footer'       => esc_html__( 'Footer Menu', 'helloturbo' ),
+			'mobile'       => esc_html__( 'Mobile Menu', 'helloturbo' ),
 		)
 	);
 
@@ -239,7 +217,15 @@ if ( is_admin() ) {
 require TURBO_THEME_DIR . '/inc/elementor-compat.php';
 
 /**
+ * Load front-end Header / Footer Builder rendering.
+ */
+require TURBO_THEME_DIR . '/inc/template-render.php';
+
+/**
  * Elementor full-width support — remove sidebar on Elementor pages.
+ *
+ * @param array $classes Body classes.
+ * @return array
  */
 function turbo_theme_elementor_body_class( $classes ) {
 	if ( defined( 'ELEMENTOR_VERSION' ) ) {
@@ -291,6 +277,12 @@ function turbo_theme_body_classes( $classes ) {
 		$classes[] = 'turbo-sticky-header';
 	}
 
+	// Mobile menu style.
+	$mobile_style = get_theme_mod( 'turbo_mobile_menu_style', 'dropdown' );
+	if ( in_array( $mobile_style, array( 'dropdown', 'fullscreen', 'sidebar' ), true ) ) {
+		$classes[] = 'turbo-mobile-' . $mobile_style;
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'turbo_theme_body_classes' );
@@ -328,10 +320,9 @@ function turbo_get_current_sidebar_layout() {
 /**
  * Custom excerpt length.
  *
- * @param int $length Default excerpt length.
  * @return int
  */
-function turbo_theme_excerpt_length( $length ) {
+function turbo_theme_excerpt_length() {
 	$custom = get_theme_mod( 'turbo_blog_excerpt_length', 30 );
 	return absint( $custom );
 }
@@ -340,10 +331,9 @@ add_filter( 'excerpt_length', 'turbo_theme_excerpt_length' );
 /**
  * Custom excerpt more text.
  *
- * @param string $more Default more string.
  * @return string
  */
-function turbo_theme_excerpt_more( $more ) {
+function turbo_theme_excerpt_more() {
 	if ( get_theme_mod( 'turbo_blog_readmore', true ) ) {
 		$text = get_theme_mod( 'turbo_blog_readmore_text', __( 'Read More &raquo;', 'helloturbo' ) );
 		return ' <a class="turbo-read-more" href="' . esc_url( get_permalink() ) . '">' . esc_html( $text ) . '</a>';
@@ -420,11 +410,11 @@ function turbo_theme_built_in_breadcrumbs( $sep ) {
 			echo '<a href="' . esc_url( get_category_link( $cats[0]->term_id ) ) . '">' . esc_html( $cats[0]->name ) . '</a>';
 			if ( is_single() ) {
 				echo '<span class="separator"> ' . esc_html( $sep ) . ' </span>';
-				the_title( '<span class="current">', '</span>' );
+				echo '<span class="current">' . esc_html( get_the_title() ) . '</span>';
 			}
 		}
 	} elseif ( is_page() ) {
-		the_title( '<span class="current">', '</span>' );
+		echo '<span class="current">' . esc_html( get_the_title() ) . '</span>';
 	} elseif ( is_archive() ) {
 		the_archive_title( '<span class="current">', '</span>' );
 	} elseif ( is_search() ) {

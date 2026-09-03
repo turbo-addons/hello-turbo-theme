@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php wp_body_open(); ?>
 
 <div id="page" class="turbo-site turbo-canvas-page">
-	<main id="primary" class="turbo-main-content">
+	<main id="primary" class="turbo-main-content" tabindex="-1">
 		<?php
 		while ( have_posts() ) :
 			the_post();

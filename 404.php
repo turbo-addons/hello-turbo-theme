@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content">
+<main id="primary" class="turbo-main-content" tabindex="-1">
 	<section class="turbo-error-404">
 		<header class="turbo-page-header">
 			<h1 class="turbo-page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'helloturbo' ); ?></h1>

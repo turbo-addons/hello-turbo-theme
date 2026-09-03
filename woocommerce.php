@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content">
+<main id="primary" class="turbo-main-content" tabindex="-1">
 	<div class="turbo-entry-content">
 		<?php woocommerce_content(); ?>
 	</div>

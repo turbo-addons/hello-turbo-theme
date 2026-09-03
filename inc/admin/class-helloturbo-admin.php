@@ -52,14 +52,12 @@ class Helloturbo_Admin {
 	 * Register the admin menu.
 	 */
 	public function register_menu() {
-		add_menu_page(
+		add_theme_page(
 			__( 'HelloTurbo', 'helloturbo' ),
 			__( 'HelloTurbo', 'helloturbo' ),
-			'manage_options',
+			'edit_theme_options',
 			'helloturbo',
-			array( $this, 'render_page' ),
-			'dashicons-admin-appearance',
-			2
+			array( $this, 'render_page' )
 		);
 	}
 
@@ -69,7 +67,7 @@ class Helloturbo_Admin {
 	 * @param string $hook_suffix The current admin page hook suffix.
 	 */
 	public function enqueue_assets( $hook_suffix ) {
-		if ( 'toplevel_page_helloturbo' !== $hook_suffix ) {
+		if ( 'appearance_page_helloturbo' !== $hook_suffix ) {
 			return;
 		}
 
@@ -105,12 +103,16 @@ class Helloturbo_Admin {
 					<span class="helloturbo-dashboard__logo dashicons dashicons-admin-appearance"></span>
 					<div>
 						<h1 class="helloturbo-dashboard__title"><?php esc_html_e( 'HelloTurbo', 'helloturbo' ); ?></h1>
-						<p class="helloturbo-dashboard__version"><?php echo esc_html( sprintf( __( 'Version %s', 'helloturbo' ), TURBO_THEME_VERSION ) ); ?></p>
+						<p class="helloturbo-dashboard__version">
+							<?php
+							/* translators: %s: theme version. */
+							echo esc_html( sprintf( __( 'Version %s', 'helloturbo' ), TURBO_THEME_VERSION ) );
+							?>
+						</p>
 					</div>
 				</div>
 				<div class="helloturbo-dashboard__actions">
 					<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Customize', 'helloturbo' ); ?></a>
-					<a href="<?php echo esc_url( admin_url( 'site-editor.php' ) ); ?>" class="button"><?php esc_html_e( 'Site Editor', 'helloturbo' ); ?></a>
 				</div>
 			</div>
 
@@ -147,7 +149,13 @@ class Helloturbo_Admin {
 	 * @param string $label  Tab label (already translated).
 	 */
 	private function render_tab_nav( $slug, $active, $label ) {
-		$url   = add_query_arg( array( 'page' => 'helloturbo', 'tab' => $slug ), admin_url( 'admin.php' ) );
+		$url   = add_query_arg(
+			array(
+				'page' => 'helloturbo',
+				'tab'  => $slug,
+			),
+			admin_url( 'themes.php' )
+		);
 		$class = 'helloturbo-dashboard__tab' . ( $slug === $active ? ' is-active' : '' );
 		?>
 		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $label ); ?></a>

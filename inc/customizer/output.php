@@ -13,49 +13,49 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Get a sanitized hex color theme mod, with a fallback default.
  *
- * @param string $key     Theme mod key.
- * @param string $default Fallback hex color.
+ * @param string $key           Theme mod key.
+ * @param string $default_value Fallback hex color.
  * @return string
  */
-function turbo_theme_color_mod( $key, $default ) {
-	$color = sanitize_hex_color( get_theme_mod( $key, $default ) );
-	return $color ? $color : $default;
+function turbo_theme_color_mod( $key, $default_value ) {
+	$color = sanitize_hex_color( get_theme_mod( $key, $default_value ) );
+	return $color ? $color : $default_value;
 }
 
 /**
  * Get an integer theme mod.
  *
- * @param string $key     Theme mod key.
- * @param int    $default Fallback integer.
+ * @param string $key           Theme mod key.
+ * @param int    $default_value Fallback integer.
  * @return int
  */
-function turbo_theme_int_mod( $key, $default ) {
-	return absint( get_theme_mod( $key, $default ) );
+function turbo_theme_int_mod( $key, $default_value ) {
+	return absint( get_theme_mod( $key, $default_value ) );
 }
 
 /**
  * Get a numeric (float) theme mod.
  *
- * @param string $key     Theme mod key.
- * @param float  $default Fallback value.
+ * @param string $key           Theme mod key.
+ * @param float  $default_value Fallback value.
  * @return float
  */
-function turbo_theme_float_mod( $key, $default ) {
-	$value = get_theme_mod( $key, $default );
-	return is_numeric( $value ) ? (float) $value : (float) $default;
+function turbo_theme_float_mod( $key, $default_value ) {
+	$value = get_theme_mod( $key, $default_value );
+	return is_numeric( $value ) ? (float) $value : (float) $default_value;
 }
 
 /**
  * Get a sanitized font-weight theme mod.
  *
- * @param string $key     Theme mod key.
- * @param string $default Fallback weight.
+ * @param string $key           Theme mod key.
+ * @param string $default_value Fallback weight.
  * @return string
  */
-function turbo_theme_weight_mod( $key, $default ) {
-	$value = get_theme_mod( $key, $default );
+function turbo_theme_weight_mod( $key, $default_value ) {
+	$value = get_theme_mod( $key, $default_value );
 	$valid = array( '100', '200', '300', '400', '500', '600', '700', '800', '900', 'normal', 'bold' );
-	return in_array( (string) $value, $valid, true ) ? $value : $default;
+	return in_array( (string) $value, $valid, true ) ? $value : $default_value;
 }
 
 /**
@@ -112,34 +112,41 @@ function turbo_dynamic_css() {
 	$css .= "  --turbo-heading-lh: {$heading_lh};\n";
 
 	// Heading sizes.
-	$h_defaults = array( 'h1' => 40, 'h2' => 32, 'h3' => 26, 'h4' => 22, 'h5' => 18, 'h6' => 16 );
+	$h_defaults = array(
+		'h1' => 40,
+		'h2' => 32,
+		'h3' => 26,
+		'h4' => 22,
+		'h5' => 18,
+		'h6' => 16,
+	);
 	foreach ( $h_defaults as $tag => $def ) {
-		$size  = turbo_theme_int_mod( "turbo_{$tag}_font_size", $def );
-		$css  .= "  --turbo-{$tag}-size: {$size}px;\n";
+		$size = turbo_theme_int_mod( "turbo_{$tag}_font_size", $def );
+		$css .= "  --turbo-{$tag}-size: {$size}px;\n";
 	}
 
 	// Button vars.
-	$css .= "  --turbo-btn-color: " . turbo_theme_color_mod( 'turbo_btn_color', '#ffffff' ) . ";\n";
-	$css .= "  --turbo-btn-bg: " . turbo_theme_color_mod( 'turbo_btn_bg', '#2563eb' ) . ";\n";
-	$css .= "  --turbo-btn-hover-color: " . turbo_theme_color_mod( 'turbo_btn_hover_color', '#ffffff' ) . ";\n";
-	$css .= "  --turbo-btn-hover-bg: " . turbo_theme_color_mod( 'turbo_btn_hover_bg', '#1e40af' ) . ";\n";
-	$css .= "  --turbo-btn-radius: " . turbo_theme_int_mod( 'turbo_btn_radius', 4 ) . "px;\n";
-	$css .= "  --turbo-btn-padding: " . turbo_theme_int_mod( 'turbo_btn_padding_v', 12 ) . "px " . turbo_theme_int_mod( 'turbo_btn_padding_h', 24 ) . "px;\n";
-	$css .= "  --turbo-btn-font-size: " . turbo_theme_int_mod( 'turbo_btn_font_size', 15 ) . "px;\n";
-	$css .= "  --turbo-btn-weight: " . turbo_theme_weight_mod( 'turbo_btn_font_weight', '500' ) . ";\n";
+	$css .= '  --turbo-btn-color: ' . turbo_theme_color_mod( 'turbo_btn_color', '#ffffff' ) . ";\n";
+	$css .= '  --turbo-btn-bg: ' . turbo_theme_color_mod( 'turbo_btn_bg', '#2563eb' ) . ";\n";
+	$css .= '  --turbo-btn-hover-color: ' . turbo_theme_color_mod( 'turbo_btn_hover_color', '#ffffff' ) . ";\n";
+	$css .= '  --turbo-btn-hover-bg: ' . turbo_theme_color_mod( 'turbo_btn_hover_bg', '#1e40af' ) . ";\n";
+	$css .= '  --turbo-btn-radius: ' . turbo_theme_int_mod( 'turbo_btn_radius', 4 ) . "px;\n";
+	$css .= '  --turbo-btn-padding: ' . turbo_theme_int_mod( 'turbo_btn_padding_v', 12 ) . 'px ' . turbo_theme_int_mod( 'turbo_btn_padding_h', 24 ) . "px;\n";
+	$css .= '  --turbo-btn-font-size: ' . turbo_theme_int_mod( 'turbo_btn_font_size', 15 ) . "px;\n";
+	$css .= '  --turbo-btn-weight: ' . turbo_theme_weight_mod( 'turbo_btn_font_weight', '500' ) . ";\n";
 
 	// Header vars.
-	$css .= "  --turbo-header-height: " . turbo_theme_int_mod( 'turbo_header_height', 70 ) . "px;\n";
-	$css .= "  --turbo-header-bg: " . turbo_theme_color_mod( 'turbo_header_bg', '#ffffff' ) . ";\n";
-	$css .= "  --turbo-menu-color: " . turbo_theme_color_mod( 'turbo_menu_color', '#1f2937' ) . ";\n";
-	$css .= "  --turbo-menu-hover: " . turbo_theme_color_mod( 'turbo_menu_hover_color', '#2563eb' ) . ";\n";
-	$css .= "  --turbo-mobile-break: " . turbo_theme_int_mod( 'turbo_mobile_breakpoint', 992 ) . "px;\n";
+	$css .= '  --turbo-header-height: ' . turbo_theme_int_mod( 'turbo_header_height', 70 ) . "px;\n";
+	$css .= '  --turbo-header-bg: ' . turbo_theme_color_mod( 'turbo_header_bg', '#ffffff' ) . ";\n";
+	$css .= '  --turbo-menu-color: ' . turbo_theme_color_mod( 'turbo_menu_color', '#1f2937' ) . ";\n";
+	$css .= '  --turbo-menu-hover: ' . turbo_theme_color_mod( 'turbo_menu_hover_color', '#2563eb' ) . ";\n";
+	$css .= '  --turbo-mobile-break: ' . turbo_theme_int_mod( 'turbo_mobile_breakpoint', 992 ) . "px;\n";
 	$css .= "}\n";
 
 	// --- Header ---
-	$header_border        = turbo_theme_int_mod( 'turbo_header_border_bottom', 1 );
-	$header_border_color  = turbo_theme_color_mod( 'turbo_header_border_color', '#e5e7eb' );
-	$css                 .= ".turbo-header { min-height: var(--turbo-header-height); background: var(--turbo-header-bg); border-bottom: {$header_border}px solid {$header_border_color}; }\n";
+	$header_border       = turbo_theme_int_mod( 'turbo_header_border_bottom', 1 );
+	$header_border_color = turbo_theme_color_mod( 'turbo_header_border_color', '#e5e7eb' );
+	$css                .= ".turbo-header { min-height: var(--turbo-header-height); background: var(--turbo-header-bg); border-bottom: {$header_border}px solid {$header_border_color}; }\n";
 
 	// Sticky.
 	if ( get_theme_mod( 'turbo_sticky_header', false ) ) {
@@ -161,6 +168,13 @@ function turbo_dynamic_css() {
 		$css     .= ".turbo-above-header { display: flex; min-height: {$ah_h}px; background: {$ah_bg}; color: {$ah_color}; border-bottom: {$ah_bb}px solid {$ah_bc}; }\n";
 	}
 
+	// Below header.
+	if ( get_theme_mod( 'turbo_below_header_enable', false ) ) {
+		$bh_bg = turbo_theme_color_mod( 'turbo_below_header_bg', '#ffffff' );
+		$bh_h  = turbo_theme_int_mod( 'turbo_below_header_height', 50 );
+		$css  .= ".turbo-below-header { display: flex; align-items: center; min-height: {$bh_h}px; background: {$bh_bg}; }\n";
+	}
+
 	// Menu.
 	$menu_size      = turbo_theme_int_mod( 'turbo_menu_font_size', 15 );
 	$menu_weight    = turbo_theme_weight_mod( 'turbo_menu_font_weight', '500' );
@@ -180,6 +194,14 @@ function turbo_dynamic_css() {
 	$css                .= ".turbo-nav-menu .sub-menu a { color: {$submenu_color}; }\n";
 	$css                .= ".turbo-nav-menu .sub-menu a:hover { color: {$submenu_hover_color}; background: {$submenu_hover_bg}; }\n";
 
+	// Mobile menu.
+	$hamburger_color = turbo_theme_color_mod( 'turbo_hamburger_color', '#111827' );
+	$mobile_menu_bg  = turbo_theme_color_mod( 'turbo_mobile_menu_bg', '#ffffff' );
+	$mobile_menu_clr = turbo_theme_color_mod( 'turbo_mobile_menu_color', '#1f2937' );
+	$css            .= ".turbo-hamburger { background: {$hamburger_color}; }\n";
+	$css            .= ".turbo-main-navigation.is-open .turbo-nav-menu { background: {$mobile_menu_bg}; }\n";
+	$css            .= ".turbo-main-navigation.is-open .turbo-nav-menu > li > a { color: {$mobile_menu_clr}; }\n";
+
 	// --- Footer ---
 	if ( get_theme_mod( 'turbo_footer_widgets_enable', true ) ) {
 		$fw_bg      = turbo_theme_color_mod( 'turbo_footer_widgets_bg', '#1f2937' );
@@ -190,7 +212,7 @@ function turbo_dynamic_css() {
 		$css       .= ".turbo-footer-widgets { background: {$fw_bg}; color: {$fw_text}; padding: {$fw_padding}px 0; }\n";
 		$css       .= ".turbo-footer-widgets .widget-title { color: {$fw_heading}; }\n";
 		$css       .= ".turbo-footer-widgets a { color: {$fw_link}; }\n";
-		$css       .= ".turbo-footer-widgets a:hover { color: " . turbo_theme_color_mod( 'turbo_footer_widgets_link_hover', '#ffffff' ) . "; }\n";
+		$css       .= '.turbo-footer-widgets a:hover { color: ' . turbo_theme_color_mod( 'turbo_footer_widgets_link_hover', '#ffffff' ) . "; }\n";
 	}
 
 	// Footer bar.
@@ -202,7 +224,7 @@ function turbo_dynamic_css() {
 	$fb_bc      = turbo_theme_color_mod( 'turbo_footer_bar_border_color', '#374151' );
 	$css       .= ".turbo-footer-bar { background: {$fb_bg}; color: {$fb_color}; padding: {$fb_padding}px 0; border-top: {$fb_bt}px solid {$fb_bc}; }\n";
 	$css       .= ".turbo-footer-bar a { color: {$fb_link}; }\n";
-	$css       .= ".turbo-footer-bar a:hover { color: " . turbo_theme_color_mod( 'turbo_footer_bar_link_hover', '#ffffff' ) . "; }\n";
+	$css       .= '.turbo-footer-bar a:hover { color: ' . turbo_theme_color_mod( 'turbo_footer_bar_link_hover', '#ffffff' ) . "; }\n";
 
 	// --- Content / Container ---
 	$content_padding_top    = turbo_theme_int_mod( 'turbo_content_padding_top', 40 );

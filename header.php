@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 
 	<?php if ( apply_filters( 'turbo_theme_show_default_header', true ) ) : ?>
-		<header id="masthead" class="turbo-header">
+		<header id="masthead" class="turbo-header turbo-header-layout-<?php echo esc_attr( get_theme_mod( 'turbo_header_layout', 'logo-left' ) ); ?> turbo-header-width-<?php echo esc_attr( get_theme_mod( 'turbo_header_width', 'contained' ) ); ?>">
 			<div class="turbo-container">
 				<div class="turbo-header-inner">
 
@@ -68,8 +68,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 						?>
 					</nav>
 
+					<?php if ( get_theme_mod( 'turbo_header_search', false ) || get_theme_mod( 'turbo_header_button_enable', false ) ) : ?>
+						<div class="turbo-header-actions">
+							<?php if ( get_theme_mod( 'turbo_header_search', false ) ) : ?>
+								<button class="turbo-search-toggle" aria-expanded="false" aria-controls="turbo-header-search" aria-label="<?php esc_attr_e( 'Toggle search', 'helloturbo' ); ?>">
+									<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+								</button>
+							<?php endif; ?>
+							<?php if ( get_theme_mod( 'turbo_header_button_enable', false ) ) : ?>
+								<a class="turbo-btn-theme turbo-header-cta" href="<?php echo esc_url( get_theme_mod( 'turbo_header_button_url', '#' ) ); ?>"><?php echo esc_html( get_theme_mod( 'turbo_header_button_text', __( 'Get Started', 'helloturbo' ) ) ); ?></a>
+							<?php endif; ?>
+						</div>
+					<?php endif; ?>
+
 				</div>
 			</div>
+
+			<?php if ( get_theme_mod( 'turbo_header_search', false ) ) : ?>
+				<div id="turbo-header-search" class="turbo-header-search-form">
+					<?php get_search_form(); ?>
+				</div>
+			<?php endif; ?>
 		</header>
 	<?php endif; ?>
 
