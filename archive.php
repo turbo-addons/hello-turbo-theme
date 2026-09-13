@@ -12,17 +12,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content" tabindex="-1">
+<main id="primary" class="helloturbo-main-content" tabindex="-1">
 	<?php if ( have_posts() ) : ?>
 
-		<header class="turbo-page-header">
+		<header class="helloturbo-page-header">
 			<?php
-			the_archive_title( '<h1 class="turbo-page-title">', '</h1>' );
-			the_archive_description( '<div class="turbo-archive-description">', '</div>' );
+			the_archive_title( '<h1 class="helloturbo-page-title">', '</h1>' );
+			the_archive_description( '<div class="helloturbo-archive-description">', '</div>' );
 			?>
 		</header>
 
-		<div class="turbo-posts-grid">
+		<div class="helloturbo-posts-grid">
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -31,7 +31,7 @@ get_header();
 			?>
 		</div>
 
-		<nav class="turbo-pagination" aria-label="<?php esc_attr_e( 'Posts navigation', 'helloturbo' ); ?>">
+		<nav class="helloturbo-pagination" aria-label="<?php esc_attr_e( 'Posts navigation', 'helloturbo' ); ?>">
 			<?php
 			the_posts_pagination(
 				array(
@@ -51,7 +51,7 @@ get_header();
 </main>
 
 <?php
-if ( 'none' !== turbo_get_current_sidebar_layout() ) {
+if ( 'none' !== helloturbo_get_current_sidebar_layout() ) {
 	get_sidebar();
 }
 get_footer();

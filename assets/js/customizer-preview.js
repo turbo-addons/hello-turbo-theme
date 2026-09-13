@@ -1,5 +1,5 @@
 /**
- * Turbo Theme — Customizer Live Preview.
+ * HelloTurbo Theme — Customizer Live Preview.
  * Updates CSS custom properties in real-time.
  */
 (function ($) {
@@ -7,41 +7,40 @@
 
     // Map customizer settings to CSS custom properties.
     var colorMappings = {
-        'turbo_palette_color_0': '--turbo-primary',
-        'turbo_palette_color_1': '--turbo-secondary',
-        'turbo_palette_color_2': '--turbo-heading-color',
-        'turbo_palette_color_3': '--turbo-text-color',
-        'turbo_palette_color_4': '--turbo-meta-color',
-        'turbo_palette_color_5': '--turbo-light-bg',
-        'turbo_palette_color_6': '--turbo-white',
-        'turbo_palette_color_7': '--turbo-border',
-        'turbo_palette_color_8': '--turbo-border-subtle',
-        'turbo_color_link': '--turbo-link',
-        'turbo_color_link_hover': '--turbo-link-hover',
-        'turbo_color_bg_site': '--turbo-site-bg',
-        'turbo_color_bg_content': '--turbo-content-bg',
-        'turbo_header_bg': '--turbo-header-bg',
-        'turbo_menu_color': '--turbo-menu-color',
-        'turbo_menu_hover_color': '--turbo-menu-hover',
-        'turbo_btn_color': '--turbo-btn-color',
-        'turbo_btn_bg': '--turbo-btn-bg',
-        'turbo_btn_hover_color': '--turbo-btn-hover-color',
-        'turbo_btn_hover_bg': '--turbo-btn-hover-bg'
+        'helloturbo_palette_color_0': '--helloturbo-primary',
+        'helloturbo_palette_color_1': '--helloturbo-secondary',
+        'helloturbo_palette_color_2': '--helloturbo-heading-color',
+        'helloturbo_palette_color_3': '--helloturbo-text-color',
+        'helloturbo_palette_color_4': '--helloturbo-meta-color',
+        'helloturbo_palette_color_5': '--helloturbo-light-bg',
+        'helloturbo_palette_color_6': '--helloturbo-white',
+        'helloturbo_palette_color_7': '--helloturbo-border',
+        'helloturbo_palette_color_8': '--helloturbo-border-subtle',
+        'helloturbo_color_link': '--helloturbo-link',
+        'helloturbo_color_link_hover': '--helloturbo-link-hover',
+        'helloturbo_color_bg_site': '--helloturbo-site-bg',
+        'helloturbo_color_bg_content': '--helloturbo-content-bg',
+        'helloturbo_header_bg': '--helloturbo-header-bg',
+        'helloturbo_menu_color': '--helloturbo-menu-color',
+        'helloturbo_menu_hover_color': '--helloturbo-menu-hover',
+        'helloturbo_btn_color': '--helloturbo-btn-color',
+        'helloturbo_btn_bg': '--helloturbo-btn-bg',
+        'helloturbo_btn_hover_color': '--helloturbo-btn-hover-color',
+        'helloturbo_btn_hover_bg': '--helloturbo-btn-hover-bg'
     };
 
     var sizeMappings = {
-        'turbo_body_font_size': { prop: '--turbo-body-size', unit: 'px' },
-        'turbo_body_line_height': { prop: '--turbo-body-lh', unit: '' },
-        'turbo_container_width': { prop: '--turbo-container', unit: 'px' },
-        'turbo_header_height': { prop: '--turbo-header-height', unit: 'px' },
-        'turbo_h1_font_size': { prop: '--turbo-h1-size', unit: 'px' },
-        'turbo_h2_font_size': { prop: '--turbo-h2-size', unit: 'px' },
-        'turbo_h3_font_size': { prop: '--turbo-h3-size', unit: 'px' },
-        'turbo_h4_font_size': { prop: '--turbo-h4-size', unit: 'px' },
-        'turbo_h5_font_size': { prop: '--turbo-h5-size', unit: 'px' },
-        'turbo_h6_font_size': { prop: '--turbo-h6-size', unit: 'px' },
-        'turbo_btn_radius': { prop: '--turbo-btn-radius', unit: 'px' },
-        'turbo_btn_font_size': { prop: '--turbo-btn-font-size', unit: 'px' }
+        'helloturbo_body_font_size': { prop: '--helloturbo-body-size', unit: 'px' },
+        'helloturbo_body_line_height': { prop: '--helloturbo-body-lh', unit: '' },
+        'helloturbo_header_height': { prop: '--helloturbo-header-height', unit: 'px' },
+        'helloturbo_h1_font_size': { prop: '--helloturbo-h1-size', unit: 'px' },
+        'helloturbo_h2_font_size': { prop: '--helloturbo-h2-size', unit: 'px' },
+        'helloturbo_h3_font_size': { prop: '--helloturbo-h3-size', unit: 'px' },
+        'helloturbo_h4_font_size': { prop: '--helloturbo-h4-size', unit: 'px' },
+        'helloturbo_h5_font_size': { prop: '--helloturbo-h5-size', unit: 'px' },
+        'helloturbo_h6_font_size': { prop: '--helloturbo-h6-size', unit: 'px' },
+        'helloturbo_btn_radius': { prop: '--helloturbo-btn-radius', unit: 'px' },
+        'helloturbo_btn_font_size': { prop: '--helloturbo-btn-font-size', unit: 'px' }
     };
 
     // Bind color settings.
@@ -62,28 +61,36 @@
         });
     });
 
+    // Container width preset (Full Width or fixed pixel value).
+    wp.customize('helloturbo_container_width', function (value) {
+        value.bind(function (newval) {
+            var width = (newval === 'full-width') ? '100%' : newval + 'px';
+            document.documentElement.style.setProperty('--helloturbo-container', width);
+        });
+    });
+
     // Font weight bindings.
-    wp.customize('turbo_body_font_weight', function (value) {
+    wp.customize('helloturbo_body_font_weight', function (value) {
         value.bind(function (newval) {
-            document.documentElement.style.setProperty('--turbo-body-weight', newval);
+            document.documentElement.style.setProperty('--helloturbo-body-weight', newval);
         });
     });
 
-    wp.customize('turbo_heading_font_weight', function (value) {
+    wp.customize('helloturbo_heading_font_weight', function (value) {
         value.bind(function (newval) {
-            document.documentElement.style.setProperty('--turbo-heading-weight', newval);
+            document.documentElement.style.setProperty('--helloturbo-heading-weight', newval);
         });
     });
 
-    wp.customize('turbo_heading_line_height', function (value) {
+    wp.customize('helloturbo_heading_line_height', function (value) {
         value.bind(function (newval) {
-            document.documentElement.style.setProperty('--turbo-heading-lh', newval);
+            document.documentElement.style.setProperty('--helloturbo-heading-lh', newval);
         });
     });
 
-    wp.customize('turbo_btn_font_weight', function (value) {
+    wp.customize('helloturbo_btn_font_weight', function (value) {
         value.bind(function (newval) {
-            document.documentElement.style.setProperty('--turbo-btn-weight', newval);
+            document.documentElement.style.setProperty('--helloturbo-btn-weight', newval);
         });
     });
 

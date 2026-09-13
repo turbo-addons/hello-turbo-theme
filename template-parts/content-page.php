@@ -10,12 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'turbo-page-article' ); ?>>
-	<header class="turbo-entry-header">
-		<?php the_title( '<h1 class="turbo-entry-title">', '</h1>' ); ?>
-	</header>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'helloturbo-page-article' ); ?>>
+	<?php if ( get_theme_mod( 'helloturbo_page_title_enable', true ) ) : ?>
+		<header class="helloturbo-entry-header">
+			<?php the_title( '<h1 class="helloturbo-entry-title">', '</h1>' ); ?>
+		</header>
+	<?php endif; ?>
 
-	<div class="turbo-entry-content">
+	<div class="helloturbo-entry-content">
 		<?php
 		the_content();
 

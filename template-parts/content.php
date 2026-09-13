@@ -10,40 +10,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'turbo-post-card' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'helloturbo-post-card' ); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="turbo-post-thumbnail">
+		<div class="helloturbo-post-thumbnail">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'medium_large' ); ?>
 			</a>
 		</div>
 	<?php endif; ?>
 
-	<div class="turbo-post-content">
-		<header class="turbo-entry-header">
-			<?php the_title( '<h2 class="turbo-entry-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' ); ?>
+	<div class="helloturbo-post-content">
+		<header class="helloturbo-entry-header">
+			<?php the_title( '<h2 class="helloturbo-entry-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' ); ?>
 
-			<div class="turbo-entry-meta">
-				<span class="turbo-posted-on">
+			<div class="helloturbo-entry-meta">
+				<span class="helloturbo-posted-on">
 					<time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
 						<?php echo esc_html( get_the_date() ); ?>
 					</time>
 				</span>
-				<span class="turbo-posted-by">
+				<span class="helloturbo-posted-by">
 					<?php echo esc_html( get_the_author() ); ?>
 				</span>
 			</div>
 		</header>
 
-		<div class="turbo-entry-summary">
+		<div class="helloturbo-entry-summary">
 			<?php the_excerpt(); ?>
 		</div>
 
-		<footer class="turbo-entry-footer">
+		<footer class="helloturbo-entry-footer">
 			<?php
-			$turbo_categories = get_the_category_list( esc_html__( ', ', 'helloturbo' ) );
-			if ( $turbo_categories ) {
-				printf( '<span class="turbo-cat-links">%s</span>', $turbo_categories ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			$helloturbo_categories = get_the_category_list( esc_html__( ', ', 'helloturbo' ) );
+			if ( $helloturbo_categories ) {
+				printf( '<span class="helloturbo-cat-links">%s</span>', $helloturbo_categories ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 			?>
 		</footer>

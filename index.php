@@ -12,16 +12,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content" tabindex="-1">
+<main id="primary" class="helloturbo-main-content" tabindex="-1">
 	<?php if ( have_posts() ) : ?>
 
-		<?php if ( is_home() && ! is_front_page() ) : ?>
-			<header class="turbo-page-header">
-				<h1 class="turbo-page-title"><?php echo esc_html( single_post_title( '', false ) ); ?></h1>
+		<?php if ( is_home() && ! is_front_page() && get_theme_mod( 'helloturbo_page_title_enable', true ) ) : ?>
+			<header class="helloturbo-page-header">
+				<h1 class="helloturbo-page-title"><?php echo esc_html( single_post_title( '', false ) ); ?></h1>
 			</header>
 		<?php endif; ?>
 
-		<div class="turbo-posts-grid">
+		<div class="helloturbo-posts-grid">
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -30,7 +30,7 @@ get_header();
 			?>
 		</div>
 
-		<nav class="turbo-pagination" aria-label="<?php esc_attr_e( 'Posts navigation', 'helloturbo' ); ?>">
+		<nav class="helloturbo-pagination" aria-label="<?php esc_attr_e( 'Posts navigation', 'helloturbo' ); ?>">
 			<?php
 			the_posts_pagination(
 				array(
@@ -50,7 +50,7 @@ get_header();
 </main>
 
 <?php
-if ( 'none' !== turbo_get_current_sidebar_layout() ) {
+if ( 'none' !== helloturbo_get_current_sidebar_layout() ) {
 	get_sidebar();
 }
 get_footer();

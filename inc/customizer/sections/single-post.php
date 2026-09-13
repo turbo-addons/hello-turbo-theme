@@ -14,32 +14,32 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param WP_Customize_Manager $wp_customize Customizer manager instance.
  */
-function turbo_customizer_single_post( $wp_customize ) {
+function helloturbo_customizer_single_post( $wp_customize ) {
 
 	// =============================================
 	// Section: Title Area
 	// =============================================
 	$wp_customize->add_section(
-		'turbo_single_title',
+		'helloturbo_single_title',
 		array(
 			'title'    => __( 'Title Area', 'helloturbo' ),
-			'panel'    => 'turbo_single_post',
+			'panel'    => 'helloturbo_single_post',
 			'priority' => 10,
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_title_layout',
+		'helloturbo_single_title_layout',
 		array(
 			'default'           => 'inline',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_title_layout',
+		'helloturbo_single_title_layout',
 		array(
 			'label'   => __( 'Title Layout', 'helloturbo' ),
-			'section' => 'turbo_single_title',
+			'section' => 'helloturbo_single_title',
 			'type'    => 'select',
 			'choices' => array(
 				'inline'   => __( 'Inline (inside content)', 'helloturbo' ),
@@ -50,7 +50,7 @@ function turbo_customizer_single_post( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_banner_bg',
+		'helloturbo_single_banner_bg',
 		array(
 			'default'           => '#111827',
 			'sanitize_callback' => 'sanitize_hex_color',
@@ -59,16 +59,16 @@ function turbo_customizer_single_post( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'turbo_single_banner_bg',
+			'helloturbo_single_banner_bg',
 			array(
 				'label'   => __( 'Banner Background Color', 'helloturbo' ),
-				'section' => 'turbo_single_title',
+				'section' => 'helloturbo_single_title',
 			)
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_banner_text_color',
+		'helloturbo_single_banner_text_color',
 		array(
 			'default'           => '#ffffff',
 			'sanitize_callback' => 'sanitize_hex_color',
@@ -77,26 +77,26 @@ function turbo_customizer_single_post( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'turbo_single_banner_text_color',
+			'helloturbo_single_banner_text_color',
 			array(
 				'label'   => __( 'Banner Text Color', 'helloturbo' ),
-				'section' => 'turbo_single_title',
+				'section' => 'helloturbo_single_title',
 			)
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_banner_padding',
+		'helloturbo_single_banner_padding',
 		array(
 			'default'           => 60,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_banner_padding',
+		'helloturbo_single_banner_padding',
 		array(
 			'label'       => __( 'Banner Padding (px)', 'helloturbo' ),
-			'section'     => 'turbo_single_title',
+			'section'     => 'helloturbo_single_title',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 20,
@@ -110,26 +110,26 @@ function turbo_customizer_single_post( $wp_customize ) {
 	// Section: Featured Image
 	// =============================================
 	$wp_customize->add_section(
-		'turbo_single_featured',
+		'helloturbo_single_featured',
 		array(
 			'title'    => __( 'Featured Image', 'helloturbo' ),
-			'panel'    => 'turbo_single_post',
+			'panel'    => 'helloturbo_single_post',
 			'priority' => 20,
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_featured_position',
+		'helloturbo_single_featured_position',
 		array(
 			'default'           => 'below-title',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_featured_position',
+		'helloturbo_single_featured_position',
 		array(
 			'label'   => __( 'Featured Image Position', 'helloturbo' ),
-			'section' => 'turbo_single_featured',
+			'section' => 'helloturbo_single_featured',
 			'type'    => 'select',
 			'choices' => array(
 				'above-title'  => __( 'Above Title', 'helloturbo' ),
@@ -141,17 +141,17 @@ function turbo_customizer_single_post( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_featured_width',
+		'helloturbo_single_featured_width',
 		array(
 			'default'           => 'contained',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_featured_width',
+		'helloturbo_single_featured_width',
 		array(
 			'label'   => __( 'Image Width', 'helloturbo' ),
-			'section' => 'turbo_single_featured',
+			'section' => 'helloturbo_single_featured',
 			'type'    => 'select',
 			'choices' => array(
 				'contained'  => __( 'Content Width', 'helloturbo' ),
@@ -164,22 +164,22 @@ function turbo_customizer_single_post( $wp_customize ) {
 	// Section: Post Meta
 	// =============================================
 	$wp_customize->add_section(
-		'turbo_single_meta',
+		'helloturbo_single_meta',
 		array(
 			'title'    => __( 'Post Meta', 'helloturbo' ),
-			'panel'    => 'turbo_single_post',
+			'panel'    => 'helloturbo_single_post',
 			'priority' => 30,
 		)
 	);
 
 	$meta_items = array(
-		'turbo_single_show_author'         => array( true, __( 'Show Author', 'helloturbo' ) ),
-		'turbo_single_show_date'           => array( true, __( 'Show Date', 'helloturbo' ) ),
-		'turbo_single_show_category'       => array( true, __( 'Show Categories', 'helloturbo' ) ),
-		'turbo_single_show_tags'           => array( true, __( 'Show Tags', 'helloturbo' ) ),
-		'turbo_single_show_comments_count' => array( true, __( 'Show Comments Count', 'helloturbo' ) ),
-		'turbo_single_show_reading_time'   => array( false, __( 'Show Reading Time', 'helloturbo' ) ),
-		'turbo_single_show_updated_date'   => array( false, __( 'Show Last Updated Date', 'helloturbo' ) ),
+		'helloturbo_single_show_author'         => array( true, __( 'Show Author', 'helloturbo' ) ),
+		'helloturbo_single_show_date'           => array( true, __( 'Show Date', 'helloturbo' ) ),
+		'helloturbo_single_show_category'       => array( true, __( 'Show Categories', 'helloturbo' ) ),
+		'helloturbo_single_show_tags'           => array( true, __( 'Show Tags', 'helloturbo' ) ),
+		'helloturbo_single_show_comments_count' => array( true, __( 'Show Comments Count', 'helloturbo' ) ),
+		'helloturbo_single_show_reading_time'   => array( false, __( 'Show Reading Time', 'helloturbo' ) ),
+		'helloturbo_single_show_updated_date'   => array( false, __( 'Show Last Updated Date', 'helloturbo' ) ),
 	);
 
 	foreach ( $meta_items as $id => $data ) {
@@ -187,14 +187,14 @@ function turbo_customizer_single_post( $wp_customize ) {
 			$id,
 			array(
 				'default'           => $data[0],
-				'sanitize_callback' => 'turbo_sanitize_checkbox',
+				'sanitize_callback' => 'helloturbo_sanitize_checkbox',
 			)
 		);
 		$wp_customize->add_control(
 			$id,
 			array(
 				'label'   => $data[1],
-				'section' => 'turbo_single_meta',
+				'section' => 'helloturbo_single_meta',
 				'type'    => 'checkbox',
 			)
 		);
@@ -204,32 +204,32 @@ function turbo_customizer_single_post( $wp_customize ) {
 	// Section: Author Box
 	// =============================================
 	$wp_customize->add_section(
-		'turbo_single_author_box',
+		'helloturbo_single_author_box',
 		array(
 			'title'    => __( 'Author Box', 'helloturbo' ),
-			'panel'    => 'turbo_single_post',
+			'panel'    => 'helloturbo_single_post',
 			'priority' => 40,
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_author_box_enable',
+		'helloturbo_single_author_box_enable',
 		array(
 			'default'           => false,
-			'sanitize_callback' => 'turbo_sanitize_checkbox',
+			'sanitize_callback' => 'helloturbo_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_author_box_enable',
+		'helloturbo_single_author_box_enable',
 		array(
 			'label'   => __( 'Show Author Box', 'helloturbo' ),
-			'section' => 'turbo_single_author_box',
+			'section' => 'helloturbo_single_author_box',
 			'type'    => 'checkbox',
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_author_box_bg',
+		'helloturbo_single_author_box_bg',
 		array(
 			'default'           => '#f9fafb',
 			'sanitize_callback' => 'sanitize_hex_color',
@@ -238,10 +238,10 @@ function turbo_customizer_single_post( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'turbo_single_author_box_bg',
+			'helloturbo_single_author_box_bg',
 			array(
 				'label'   => __( 'Author Box Background', 'helloturbo' ),
-				'section' => 'turbo_single_author_box',
+				'section' => 'helloturbo_single_author_box',
 			)
 		)
 	);
@@ -250,42 +250,42 @@ function turbo_customizer_single_post( $wp_customize ) {
 	// Section: Related Posts
 	// =============================================
 	$wp_customize->add_section(
-		'turbo_single_related',
+		'helloturbo_single_related',
 		array(
 			'title'    => __( 'Related Posts', 'helloturbo' ),
-			'panel'    => 'turbo_single_post',
+			'panel'    => 'helloturbo_single_post',
 			'priority' => 50,
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_related_enable',
+		'helloturbo_single_related_enable',
 		array(
 			'default'           => true,
-			'sanitize_callback' => 'turbo_sanitize_checkbox',
+			'sanitize_callback' => 'helloturbo_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_related_enable',
+		'helloturbo_single_related_enable',
 		array(
 			'label'   => __( 'Show Related Posts', 'helloturbo' ),
-			'section' => 'turbo_single_related',
+			'section' => 'helloturbo_single_related',
 			'type'    => 'checkbox',
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_related_count',
+		'helloturbo_single_related_count',
 		array(
 			'default'           => 3,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_related_count',
+		'helloturbo_single_related_count',
 		array(
 			'label'       => __( 'Number of Posts', 'helloturbo' ),
-			'section'     => 'turbo_single_related',
+			'section'     => 'helloturbo_single_related',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 2,
@@ -296,17 +296,17 @@ function turbo_customizer_single_post( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_related_columns',
+		'helloturbo_single_related_columns',
 		array(
 			'default'           => 3,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_related_columns',
+		'helloturbo_single_related_columns',
 		array(
 			'label'   => __( 'Columns', 'helloturbo' ),
-			'section' => 'turbo_single_related',
+			'section' => 'helloturbo_single_related',
 			'type'    => 'select',
 			'choices' => array(
 				'2' => '2',
@@ -317,17 +317,17 @@ function turbo_customizer_single_post( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_related_by',
+		'helloturbo_single_related_by',
 		array(
 			'default'           => 'category',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_related_by',
+		'helloturbo_single_related_by',
 		array(
 			'label'   => __( 'Relation By', 'helloturbo' ),
-			'section' => 'turbo_single_related',
+			'section' => 'helloturbo_single_related',
 			'type'    => 'select',
 			'choices' => array(
 				'category' => __( 'Category', 'helloturbo' ),
@@ -340,28 +340,28 @@ function turbo_customizer_single_post( $wp_customize ) {
 	// Section: Post Navigation
 	// =============================================
 	$wp_customize->add_section(
-		'turbo_single_navigation',
+		'helloturbo_single_navigation',
 		array(
 			'title'    => __( 'Post Navigation', 'helloturbo' ),
-			'panel'    => 'turbo_single_post',
+			'panel'    => 'helloturbo_single_post',
 			'priority' => 60,
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_single_nav_enable',
+		'helloturbo_single_nav_enable',
 		array(
 			'default'           => true,
-			'sanitize_callback' => 'turbo_sanitize_checkbox',
+			'sanitize_callback' => 'helloturbo_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_single_nav_enable',
+		'helloturbo_single_nav_enable',
 		array(
 			'label'   => __( 'Show Previous / Next Navigation', 'helloturbo' ),
-			'section' => 'turbo_single_navigation',
+			'section' => 'helloturbo_single_navigation',
 			'type'    => 'checkbox',
 		)
 	);
 }
-add_action( 'customize_register', 'turbo_customizer_single_post' );
+add_action( 'customize_register', 'helloturbo_customizer_single_post' );

@@ -33,7 +33,7 @@ class Helloturbo_Admin {
 			'required'    => false,
 		),
 		array(
-			'slug'        => 'turbo-addons-elementor',
+			'slug'        => 'helloturbo-addons-elementor',
 			'name'        => 'Turbo Addons Elementor',
 			'description' => 'The companion widgets toolkit by Turbo Addons, adding 90+ Elementor widgets and 200+ ready templates for HelloTurbo.',
 			'required'    => false,
@@ -73,9 +73,9 @@ class Helloturbo_Admin {
 
 		wp_enqueue_style(
 			'helloturbo-admin',
-			TURBO_THEME_URI . '/assets/css/admin.css',
+			HELLOTURBO_THEME_URI . '/assets/css/admin.css',
 			array(),
-			TURBO_THEME_VERSION
+			HELLOTURBO_THEME_VERSION
 		);
 	}
 
@@ -106,7 +106,7 @@ class Helloturbo_Admin {
 						<p class="helloturbo-dashboard__version">
 							<?php
 							/* translators: %s: theme version. */
-							echo esc_html( sprintf( __( 'Version %s', 'helloturbo' ), TURBO_THEME_VERSION ) );
+							echo esc_html( sprintf( __( 'Version %s', 'helloturbo' ), HELLOTURBO_THEME_VERSION ) );
 							?>
 						</p>
 					</div>
@@ -331,47 +331,47 @@ class Helloturbo_Admin {
 			array(
 				'title' => __( 'Global Colors', 'helloturbo' ),
 				'desc'  => __( 'Set your site-wide color palette.', 'helloturbo' ),
-				'focus' => 'turbo_global_colors',
+				'focus' => 'helloturbo_global_colors',
 			),
 			array(
 				'title' => __( 'Typography', 'helloturbo' ),
 				'desc'  => __( 'Body and heading fonts, plus H1-H6 sizes.', 'helloturbo' ),
-				'focus' => 'turbo_global_typography',
+				'focus' => 'helloturbo_global_typography',
 			),
 			array(
 				'title' => __( 'Buttons', 'helloturbo' ),
 				'desc'  => __( 'Button colors, radius, padding, and weight.', 'helloturbo' ),
-				'focus' => 'turbo_global_buttons',
+				'focus' => 'helloturbo_global_buttons',
 			),
 			array(
 				'title' => __( 'Header Builder', 'helloturbo' ),
 				'desc'  => __( 'Build your header with multiple rows.', 'helloturbo' ),
-				'panel' => 'turbo_header_builder',
+				'panel' => 'helloturbo_header_builder',
 			),
 			array(
 				'title' => __( 'Footer Builder', 'helloturbo' ),
 				'desc'  => __( 'Widget areas and the copyright bar.', 'helloturbo' ),
-				'panel' => 'turbo_footer_builder',
+				'panel' => 'helloturbo_footer_builder',
 			),
 			array(
 				'title' => __( 'Blog &amp; Archive', 'helloturbo' ),
 				'desc'  => __( 'List, grid, and masonry layouts.', 'helloturbo' ),
-				'panel' => 'turbo_blog',
+				'panel' => 'helloturbo_blog',
 			),
 			array(
 				'title' => __( 'Single Post', 'helloturbo' ),
 				'desc'  => __( 'Title, featured image, meta, and related posts.', 'helloturbo' ),
-				'panel' => 'turbo_single_post',
+				'panel' => 'helloturbo_single_post',
 			),
 			array(
 				'title' => __( 'Sidebar', 'helloturbo' ),
 				'desc'  => __( 'Sidebar position per content type.', 'helloturbo' ),
-				'focus' => 'turbo_sidebar',
+				'focus' => 'helloturbo_sidebar',
 			),
 			array(
 				'title' => __( 'Breadcrumbs', 'helloturbo' ),
 				'desc'  => __( 'Enable and style breadcrumbs.', 'helloturbo' ),
-				'focus' => 'turbo_breadcrumbs',
+				'focus' => 'helloturbo_breadcrumbs',
 			),
 		);
 		?>

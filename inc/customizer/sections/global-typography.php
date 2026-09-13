@@ -14,49 +14,49 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param WP_Customize_Manager $wp_customize Customizer manager instance.
  */
-function turbo_customizer_global_typography( $wp_customize ) {
+function helloturbo_customizer_global_typography( $wp_customize ) {
 
 	$wp_customize->add_section(
-		'turbo_global_typography',
+		'helloturbo_global_typography',
 		array(
 			'title'    => __( 'Typography', 'helloturbo' ),
-			'panel'    => 'turbo_global',
+			'panel'    => 'helloturbo_global',
 			'priority' => 20,
 		)
 	);
 
-	$fonts = turbo_font_stacks_list();
+	$fonts = helloturbo_font_stacks_list();
 
 	// --- Body Typography ---
 	$wp_customize->add_setting(
-		'turbo_body_font_family',
+		'helloturbo_body_font_family',
 		array(
 			'default'           => 'system',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_body_font_family',
+		'helloturbo_body_font_family',
 		array(
 			'label'   => __( 'Body Font Family', 'helloturbo' ),
-			'section' => 'turbo_global_typography',
+			'section' => 'helloturbo_global_typography',
 			'type'    => 'select',
 			'choices' => $fonts,
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_body_font_weight',
+		'helloturbo_body_font_weight',
 		array(
 			'default'           => '400',
-			'sanitize_callback' => 'turbo_sanitize_font_weight',
+			'sanitize_callback' => 'helloturbo_sanitize_font_weight',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_body_font_weight',
+		'helloturbo_body_font_weight',
 		array(
 			'label'   => __( 'Body Font Weight', 'helloturbo' ),
-			'section' => 'turbo_global_typography',
+			'section' => 'helloturbo_global_typography',
 			'type'    => 'select',
 			'choices' => array(
 				'300' => '300 (Light)',
@@ -69,17 +69,17 @@ function turbo_customizer_global_typography( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_body_font_size',
+		'helloturbo_body_font_size',
 		array(
 			'default'           => 16,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_body_font_size',
+		'helloturbo_body_font_size',
 		array(
 			'label'       => __( 'Body Font Size (px)', 'helloturbo' ),
-			'section'     => 'turbo_global_typography',
+			'section'     => 'helloturbo_global_typography',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 12,
@@ -90,17 +90,17 @@ function turbo_customizer_global_typography( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_body_line_height',
+		'helloturbo_body_line_height',
 		array(
 			'default'           => '1.65',
-			'sanitize_callback' => 'turbo_sanitize_number',
+			'sanitize_callback' => 'helloturbo_sanitize_number',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_body_line_height',
+		'helloturbo_body_line_height',
 		array(
 			'label'       => __( 'Body Line Height', 'helloturbo' ),
-			'section'     => 'turbo_global_typography',
+			'section'     => 'helloturbo_global_typography',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 1,
@@ -111,17 +111,17 @@ function turbo_customizer_global_typography( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_body_text_transform',
+		'helloturbo_body_text_transform',
 		array(
 			'default'           => 'none',
-			'sanitize_callback' => 'turbo_sanitize_text_transform',
+			'sanitize_callback' => 'helloturbo_sanitize_text_transform',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_body_text_transform',
+		'helloturbo_body_text_transform',
 		array(
 			'label'   => __( 'Body Text Transform', 'helloturbo' ),
-			'section' => 'turbo_global_typography',
+			'section' => 'helloturbo_global_typography',
 			'type'    => 'select',
 			'choices' => array(
 				'none'       => 'None',
@@ -134,34 +134,34 @@ function turbo_customizer_global_typography( $wp_customize ) {
 
 	// --- Heading Typography ---
 	$wp_customize->add_setting(
-		'turbo_heading_font_family',
+		'helloturbo_heading_font_family',
 		array(
 			'default'           => 'system',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_heading_font_family',
+		'helloturbo_heading_font_family',
 		array(
 			'label'   => __( 'Heading Font Family', 'helloturbo' ),
-			'section' => 'turbo_global_typography',
+			'section' => 'helloturbo_global_typography',
 			'type'    => 'select',
 			'choices' => $fonts,
 		)
 	);
 
 	$wp_customize->add_setting(
-		'turbo_heading_font_weight',
+		'helloturbo_heading_font_weight',
 		array(
 			'default'           => '700',
-			'sanitize_callback' => 'turbo_sanitize_font_weight',
+			'sanitize_callback' => 'helloturbo_sanitize_font_weight',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_heading_font_weight',
+		'helloturbo_heading_font_weight',
 		array(
 			'label'   => __( 'Heading Font Weight', 'helloturbo' ),
-			'section' => 'turbo_global_typography',
+			'section' => 'helloturbo_global_typography',
 			'type'    => 'select',
 			'choices' => array(
 				'400' => '400',
@@ -175,17 +175,17 @@ function turbo_customizer_global_typography( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_heading_text_transform',
+		'helloturbo_heading_text_transform',
 		array(
 			'default'           => 'none',
-			'sanitize_callback' => 'turbo_sanitize_text_transform',
+			'sanitize_callback' => 'helloturbo_sanitize_text_transform',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_heading_text_transform',
+		'helloturbo_heading_text_transform',
 		array(
 			'label'   => __( 'Heading Text Transform', 'helloturbo' ),
-			'section' => 'turbo_global_typography',
+			'section' => 'helloturbo_global_typography',
 			'type'    => 'select',
 			'choices' => array(
 				'none'       => 'None',
@@ -197,17 +197,17 @@ function turbo_customizer_global_typography( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_heading_line_height',
+		'helloturbo_heading_line_height',
 		array(
 			'default'           => '1.3',
-			'sanitize_callback' => 'turbo_sanitize_number',
+			'sanitize_callback' => 'helloturbo_sanitize_number',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_heading_line_height',
+		'helloturbo_heading_line_height',
 		array(
 			'label'       => __( 'Heading Line Height', 'helloturbo' ),
-			'section'     => 'turbo_global_typography',
+			'section'     => 'helloturbo_global_typography',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 1,
@@ -229,21 +229,21 @@ function turbo_customizer_global_typography( $wp_customize ) {
 
 	foreach ( $heading_defaults as $tag => $default_size ) {
 		$wp_customize->add_setting(
-			"turbo_{$tag}_font_size",
+			"helloturbo_{$tag}_font_size",
 			array(
 				'default'           => $default_size,
 				'sanitize_callback' => 'absint',
 			)
 		);
 		$wp_customize->add_control(
-			"turbo_{$tag}_font_size",
+			"helloturbo_{$tag}_font_size",
 			array(
 				'label'       => sprintf(
 					/* translators: %s: heading tag (H1, H2, etc.). */
 					__( '%s Font Size (px)', 'helloturbo' ),
 					strtoupper( $tag )
 				),
-				'section'     => 'turbo_global_typography',
+				'section'     => 'helloturbo_global_typography',
 				'type'        => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -254,4 +254,4 @@ function turbo_customizer_global_typography( $wp_customize ) {
 		);
 	}
 }
-add_action( 'customize_register', 'turbo_customizer_global_typography' );
+add_action( 'customize_register', 'helloturbo_customizer_global_typography' );

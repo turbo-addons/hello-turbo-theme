@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content" tabindex="-1">
+<main id="primary" class="helloturbo-main-content" tabindex="-1">
 	<?php
 	while ( have_posts() ) :
 		the_post();
@@ -26,7 +26,7 @@ get_header();
 </main>
 
 <?php
-if ( 'none' !== turbo_get_current_sidebar_layout() ) {
+if ( 'none' !== helloturbo_get_current_sidebar_layout() ) {
 	get_sidebar();
 }
 get_footer();

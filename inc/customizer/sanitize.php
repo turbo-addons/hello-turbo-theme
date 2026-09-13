@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param mixed $val Value to sanitize.
  * @return bool
  */
-function turbo_sanitize_checkbox( $val ) {
+function helloturbo_sanitize_checkbox( $val ) {
 	return (bool) $val;
 }
 
@@ -26,7 +26,7 @@ function turbo_sanitize_checkbox( $val ) {
  * @param WP_Customize_Setting $setting Setting object.
  * @return string
  */
-function turbo_sanitize_select( $input, $setting ) {
+function helloturbo_sanitize_select( $input, $setting ) {
 	$control = $setting->manager->get_control( $setting->id );
 	$choices = ( $control && isset( $control->choices ) ) ? $control->choices : array();
 	return array_key_exists( $input, $choices ) ? $input : $setting->default;
@@ -38,7 +38,7 @@ function turbo_sanitize_select( $input, $setting ) {
  * @param mixed $val Value to sanitize.
  * @return float
  */
-function turbo_sanitize_number( $val ) {
+function helloturbo_sanitize_number( $val ) {
 	return is_numeric( $val ) ? floatval( $val ) : 0;
 }
 
@@ -48,7 +48,7 @@ function turbo_sanitize_number( $val ) {
  * @param string $val Color value.
  * @return string
  */
-function turbo_sanitize_rgba( $val ) {
+function helloturbo_sanitize_rgba( $val ) {
 	if ( empty( $val ) ) {
 		return '';
 	}
@@ -67,7 +67,7 @@ function turbo_sanitize_rgba( $val ) {
  * @param string $val Weight value.
  * @return string
  */
-function turbo_sanitize_font_weight( $val ) {
+function helloturbo_sanitize_font_weight( $val ) {
 	$valid = array( '100', '200', '300', '400', '500', '600', '700', '800', '900', 'normal', 'bold' );
 	return in_array( (string) $val, $valid, true ) ? $val : '400';
 }
@@ -78,7 +78,7 @@ function turbo_sanitize_font_weight( $val ) {
  * @param string $val Transform value.
  * @return string
  */
-function turbo_sanitize_text_transform( $val ) {
+function helloturbo_sanitize_text_transform( $val ) {
 	$valid = array( 'none', 'capitalize', 'uppercase', 'lowercase' );
 	return in_array( $val, $valid, true ) ? $val : 'none';
 }
@@ -89,7 +89,7 @@ function turbo_sanitize_text_transform( $val ) {
  * @param array $val Value to sanitize.
  * @return array
  */
-function turbo_sanitize_sortable( $val ) {
+function helloturbo_sanitize_sortable( $val ) {
 	if ( is_array( $val ) ) {
 		return array_map( 'sanitize_text_field', $val );
 	}

@@ -3,7 +3,7 @@ Contributors: turboaddons
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,12 @@ Yes. HelloTurbo includes WooCommerce support out of the box.
 Go to Appearance > Customize > Header Builder or Footer Builder panels.
 
 == Changelog ==
+
+= 1.1.1 =
+* Fixed Menu, Layout all issues and slove the all feedback by the theme reviewer.
+
+= 1.1.0 =
+* Added header/footer builder front-end rendering, keyboard navigation improvements, and WordPress.org review fixes.
 
 = 1.0.0 =
 * Initial release

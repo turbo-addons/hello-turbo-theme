@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param WP_Customize_Manager $wp_customize Customizer manager instance.
  */
-function turbo_customizer_sidebar( $wp_customize ) {
+function helloturbo_customizer_sidebar( $wp_customize ) {
 
 	$wp_customize->add_section(
-		'turbo_sidebar',
+		'helloturbo_sidebar',
 		array(
 			'title'    => __( 'Sidebar', 'helloturbo' ),
 			'priority' => 28,
@@ -26,17 +26,17 @@ function turbo_customizer_sidebar( $wp_customize ) {
 
 	// Default sidebar position.
 	$wp_customize->add_setting(
-		'turbo_sidebar_default',
+		'helloturbo_sidebar_default',
 		array(
 			'default'           => 'right',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_sidebar_default',
+		'helloturbo_sidebar_default',
 		array(
 			'label'   => __( 'Default Sidebar Position', 'helloturbo' ),
-			'section' => 'turbo_sidebar',
+			'section' => 'helloturbo_sidebar',
 			'type'    => 'select',
 			'choices' => array(
 				'right' => __( 'Right Sidebar', 'helloturbo' ),
@@ -48,17 +48,17 @@ function turbo_customizer_sidebar( $wp_customize ) {
 
 	// Sidebar width.
 	$wp_customize->add_setting(
-		'turbo_sidebar_width',
+		'helloturbo_sidebar_width',
 		array(
 			'default'           => 30,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_sidebar_width',
+		'helloturbo_sidebar_width',
 		array(
 			'label'       => __( 'Sidebar Width (%)', 'helloturbo' ),
-			'section'     => 'turbo_sidebar',
+			'section'     => 'helloturbo_sidebar',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 15,
@@ -70,17 +70,17 @@ function turbo_customizer_sidebar( $wp_customize ) {
 
 	// Page sidebar.
 	$wp_customize->add_setting(
-		'turbo_sidebar_page',
+		'helloturbo_sidebar_page',
 		array(
 			'default'           => 'none',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_sidebar_page',
+		'helloturbo_sidebar_page',
 		array(
 			'label'   => __( 'Pages Sidebar', 'helloturbo' ),
-			'section' => 'turbo_sidebar',
+			'section' => 'helloturbo_sidebar',
 			'type'    => 'select',
 			'choices' => array(
 				'default' => __( 'Use Default', 'helloturbo' ),
@@ -93,17 +93,17 @@ function turbo_customizer_sidebar( $wp_customize ) {
 
 	// Single post sidebar.
 	$wp_customize->add_setting(
-		'turbo_sidebar_single',
+		'helloturbo_sidebar_single',
 		array(
 			'default'           => 'right',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_sidebar_single',
+		'helloturbo_sidebar_single',
 		array(
 			'label'   => __( 'Single Post Sidebar', 'helloturbo' ),
-			'section' => 'turbo_sidebar',
+			'section' => 'helloturbo_sidebar',
 			'type'    => 'select',
 			'choices' => array(
 				'default' => __( 'Use Default', 'helloturbo' ),
@@ -116,17 +116,17 @@ function turbo_customizer_sidebar( $wp_customize ) {
 
 	// Archive sidebar.
 	$wp_customize->add_setting(
-		'turbo_sidebar_archive',
+		'helloturbo_sidebar_archive',
 		array(
 			'default'           => 'right',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_sidebar_archive',
+		'helloturbo_sidebar_archive',
 		array(
 			'label'   => __( 'Archive / Blog Sidebar', 'helloturbo' ),
-			'section' => 'turbo_sidebar',
+			'section' => 'helloturbo_sidebar',
 			'type'    => 'select',
 			'choices' => array(
 				'default' => __( 'Use Default', 'helloturbo' ),
@@ -139,17 +139,17 @@ function turbo_customizer_sidebar( $wp_customize ) {
 
 	// WooCommerce sidebar.
 	$wp_customize->add_setting(
-		'turbo_sidebar_woo',
+		'helloturbo_sidebar_woo',
 		array(
 			'default'           => 'none',
-			'sanitize_callback' => 'turbo_sanitize_select',
+			'sanitize_callback' => 'helloturbo_sanitize_select',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_sidebar_woo',
+		'helloturbo_sidebar_woo',
 		array(
 			'label'   => __( 'WooCommerce Sidebar', 'helloturbo' ),
-			'section' => 'turbo_sidebar',
+			'section' => 'helloturbo_sidebar',
 			'type'    => 'select',
 			'choices' => array(
 				'default' => __( 'Use Default', 'helloturbo' ),
@@ -162,19 +162,19 @@ function turbo_customizer_sidebar( $wp_customize ) {
 
 	// Sticky sidebar.
 	$wp_customize->add_setting(
-		'turbo_sidebar_sticky',
+		'helloturbo_sidebar_sticky',
 		array(
 			'default'           => false,
-			'sanitize_callback' => 'turbo_sanitize_checkbox',
+			'sanitize_callback' => 'helloturbo_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_sidebar_sticky',
+		'helloturbo_sidebar_sticky',
 		array(
 			'label'   => __( 'Enable Sticky Sidebar', 'helloturbo' ),
-			'section' => 'turbo_sidebar',
+			'section' => 'helloturbo_sidebar',
 			'type'    => 'checkbox',
 		)
 	);
 }
-add_action( 'customize_register', 'turbo_customizer_sidebar' );
+add_action( 'customize_register', 'helloturbo_customizer_sidebar' );

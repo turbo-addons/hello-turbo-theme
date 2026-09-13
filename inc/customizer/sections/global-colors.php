@@ -14,13 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param WP_Customize_Manager $wp_customize Customizer manager instance.
  */
-function turbo_customizer_global_colors( $wp_customize ) {
+function helloturbo_customizer_global_colors( $wp_customize ) {
 
 	$wp_customize->add_section(
-		'turbo_global_colors',
+		'helloturbo_global_colors',
 		array(
 			'title'    => __( 'Colors', 'helloturbo' ),
-			'panel'    => 'turbo_global',
+			'panel'    => 'helloturbo_global',
 			'priority' => 10,
 		)
 	);
@@ -52,7 +52,7 @@ function turbo_customizer_global_colors( $wp_customize ) {
 
 	for ( $i = 0; $i < 9; $i++ ) {
 		$wp_customize->add_setting(
-			"turbo_palette_color_{$i}",
+			"helloturbo_palette_color_{$i}",
 			array(
 				'default'           => $palette_defaults[ $i ],
 				'sanitize_callback' => 'sanitize_hex_color',
@@ -62,10 +62,10 @@ function turbo_customizer_global_colors( $wp_customize ) {
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
-				"turbo_palette_color_{$i}",
+				"helloturbo_palette_color_{$i}",
 				array(
 					'label'   => $palette_labels[ $i ],
-					'section' => 'turbo_global_colors',
+					'section' => 'helloturbo_global_colors',
 				)
 			)
 		);
@@ -73,10 +73,10 @@ function turbo_customizer_global_colors( $wp_customize ) {
 
 	// --- Surface Colors ---
 	$surfaces = array(
-		'turbo_color_bg_site'    => array( '#ffffff', __( 'Site Background', 'helloturbo' ) ),
-		'turbo_color_bg_content' => array( '#ffffff', __( 'Content Background', 'helloturbo' ) ),
-		'turbo_color_link'       => array( '#2563eb', __( 'Link Color', 'helloturbo' ) ),
-		'turbo_color_link_hover' => array( '#1e40af', __( 'Link Hover Color', 'helloturbo' ) ),
+		'helloturbo_color_bg_site'    => array( '#ffffff', __( 'Site Background', 'helloturbo' ) ),
+		'helloturbo_color_bg_content' => array( '#ffffff', __( 'Content Background', 'helloturbo' ) ),
+		'helloturbo_color_link'       => array( '#2563eb', __( 'Link Color', 'helloturbo' ) ),
+		'helloturbo_color_link_hover' => array( '#1e40af', __( 'Link Hover Color', 'helloturbo' ) ),
 	);
 
 	foreach ( $surfaces as $id => $data ) {
@@ -94,10 +94,10 @@ function turbo_customizer_global_colors( $wp_customize ) {
 				$id,
 				array(
 					'label'   => $data[1],
-					'section' => 'turbo_global_colors',
+					'section' => 'helloturbo_global_colors',
 				)
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'turbo_customizer_global_colors' );
+add_action( 'customize_register', 'helloturbo_customizer_global_colors' );

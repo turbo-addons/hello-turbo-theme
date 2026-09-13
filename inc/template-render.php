@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @return array List of ['url' => string, 'label' => string, 'network' => string].
  */
-function turbo_get_social_links() {
+function helloturbo_get_social_links() {
 	$networks = array(
 		'facebook'  => __( 'Facebook', 'helloturbo' ),
 		'twitter'   => __( 'Twitter', 'helloturbo' ),
@@ -28,7 +28,7 @@ function turbo_get_social_links() {
 
 	$links = array();
 	foreach ( $networks as $slug => $label ) {
-		$url = get_theme_mod( "turbo_social_{$slug}", '' );
+		$url = get_theme_mod( "helloturbo_social_{$slug}", '' );
 		if ( $url ) {
 			$links[] = array(
 				'url'     => $url,
@@ -47,7 +47,7 @@ function turbo_get_social_links() {
  * @param string $network Network slug.
  * @return string
  */
-function turbo_social_icon_svg( $network ) {
+function helloturbo_social_icon_svg( $network ) {
 	$svg = array(
 		'facebook'  => '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5 21v-7h2.5l.5-3h-3V9c0-.9.3-1.5 1.7-1.5H17V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4V11H8v3h2.6v7h2.9z"/></svg>',
 		'twitter'   => '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.2-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.8 3.7A11.4 11.4 0 0 1 3.8 4.8a4 4 0 0 0 1.2 5.4c-.6 0-1.2-.2-1.8-.5v.1c0 2 1.4 3.6 3.2 4-.6.2-1.2.2-1.8.1.5 1.6 2 2.8 3.8 2.8A8 8 0 0 1 2 18.6a11.3 11.3 0 0 0 6.1 1.8c7.3 0 11.3-6 11.3-11.3v-.5c.8-.6 1.4-1.3 2-2.1z"/></svg>',
@@ -62,17 +62,17 @@ function turbo_social_icon_svg( $network ) {
 /**
  * Render a row of social icon links.
  */
-function turbo_render_social_icons() {
-	$links = turbo_get_social_links();
+function helloturbo_render_social_icons() {
+	$links = helloturbo_get_social_links();
 	if ( empty( $links ) ) {
 		return;
 	}
 	?>
-	<div class="turbo-social-icons">
+	<div class="helloturbo-social-icons">
 		<?php foreach ( $links as $link ) : ?>
-			<a class="turbo-social-icon turbo-social-icon--<?php echo esc_attr( $link['network'] ); ?>" href="<?php echo esc_url( $link['url'] ); ?>" target="_blank" rel="noopener noreferrer">
+			<a class="helloturbo-social-icon helloturbo-social-icon--<?php echo esc_attr( $link['network'] ); ?>" href="<?php echo esc_url( $link['url'] ); ?>" target="_blank" rel="noopener noreferrer">
 				<span class="screen-reader-text"><?php echo esc_html( $link['label'] ); ?></span>
-				<?php echo turbo_social_icon_svg( $link['network'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php echo helloturbo_social_icon_svg( $link['network'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</a>
 		<?php endforeach; ?>
 	</div>
@@ -87,7 +87,7 @@ function turbo_render_social_icons() {
  * @param string $location  Menu location.
  * @param string $menu_class CSS class for the menu.
  */
-function turbo_render_header_content( $type, $text_mod, $location, $menu_class ) {
+function helloturbo_render_header_content( $type, $text_mod, $location, $menu_class ) {
 	switch ( $type ) {
 		case 'text':
 			echo wp_kses_post( get_theme_mod( $text_mod, '' ) );
@@ -108,7 +108,7 @@ function turbo_render_header_content( $type, $text_mod, $location, $menu_class )
 			break;
 
 		case 'social':
-			turbo_render_social_icons();
+			helloturbo_render_social_icons();
 			break;
 	}
 }
@@ -116,50 +116,50 @@ function turbo_render_header_content( $type, $text_mod, $location, $menu_class )
 /**
  * Render the "Above Header" row.
  */
-function turbo_theme_above_header() {
-	if ( ! get_theme_mod( 'turbo_above_header_enable', false ) ) {
+function helloturbo_theme_above_header() {
+	if ( ! get_theme_mod( 'helloturbo_above_header_enable', false ) ) {
 		return;
 	}
 	?>
-	<div class="turbo-above-header">
-		<div class="turbo-container">
-			<div class="turbo-above-header-inner">
-				<div class="turbo-above-header-left">
-					<?php turbo_render_header_content( get_theme_mod( 'turbo_above_header_left', 'text' ), 'turbo_above_header_left_text', 'above-header', 'turbo-inline-menu' ); ?>
+	<div class="helloturbo-above-header">
+		<div class="helloturbo-container">
+			<div class="helloturbo-above-header-inner">
+				<div class="helloturbo-above-header-left">
+					<?php helloturbo_render_header_content( get_theme_mod( 'helloturbo_above_header_left', 'text' ), 'helloturbo_above_header_left_text', 'above-header', 'helloturbo-inline-menu' ); ?>
 				</div>
-				<div class="turbo-above-header-right">
-					<?php turbo_render_header_content( get_theme_mod( 'turbo_above_header_right', 'text' ), 'turbo_above_header_right_text', 'above-header', 'turbo-inline-menu' ); ?>
+				<div class="helloturbo-above-header-right">
+					<?php helloturbo_render_header_content( get_theme_mod( 'helloturbo_above_header_right', 'text' ), 'helloturbo_above_header_right_text', 'above-header', 'helloturbo-inline-menu' ); ?>
 				</div>
 			</div>
 		</div>
 	</div>
 	<?php
 }
-add_action( 'turbo_theme_before_header', 'turbo_theme_above_header' );
+add_action( 'helloturbo_theme_before_header', 'helloturbo_theme_above_header' );
 
 /**
  * Render the "Below Header" row.
  */
-function turbo_theme_below_header() {
-	if ( ! get_theme_mod( 'turbo_below_header_enable', false ) ) {
+function helloturbo_theme_below_header() {
+	if ( ! get_theme_mod( 'helloturbo_below_header_enable', false ) ) {
 		return;
 	}
 
-	$content = get_theme_mod( 'turbo_below_header_content', 'menu' );
+	$content = get_theme_mod( 'helloturbo_below_header_content', 'menu' );
 	if ( 'none' === $content ) {
 		return;
 	}
 	?>
-	<div class="turbo-below-header">
-		<div class="turbo-container">
-			<div class="turbo-below-header-inner">
-				<?php turbo_render_header_content( $content, 'turbo_below_header_text', 'secondary', 'turbo-nav-menu' ); ?>
+	<div class="helloturbo-below-header">
+		<div class="helloturbo-container">
+			<div class="helloturbo-below-header-inner">
+				<?php helloturbo_render_header_content( $content, 'helloturbo_below_header_text', 'secondary', 'helloturbo-nav-menu' ); ?>
 			</div>
 		</div>
 	</div>
 	<?php
 }
-add_action( 'turbo_theme_after_header', 'turbo_theme_below_header', 5 );
+add_action( 'helloturbo_theme_after_header', 'helloturbo_theme_below_header', 5 );
 
 /**
  * Replace dynamic tags in copyright text.
@@ -167,7 +167,7 @@ add_action( 'turbo_theme_after_header', 'turbo_theme_below_header', 5 );
  * @param string $text Raw text.
  * @return string
  */
-function turbo_replace_copyright_tags( $text ) {
+function helloturbo_replace_copyright_tags( $text ) {
 	$replace = array(
 		'{year}'       => esc_html( gmdate( 'Y' ) ),
 		'{site_title}' => esc_html( get_bloginfo( 'name' ) ),
@@ -179,45 +179,45 @@ function turbo_replace_copyright_tags( $text ) {
 /**
  * Render the footer copyright bar.
  */
-function turbo_theme_footer_bar() {
-	$left        = get_theme_mod( 'turbo_copyright_text_left', __( 'Copyright {year} {site_title}. All rights reserved.', 'helloturbo' ) );
-	$right       = get_theme_mod( 'turbo_copyright_text_right', __( 'Powered by HelloTurbo', 'helloturbo' ) );
-	$layout      = get_theme_mod( 'turbo_footer_bar_layout', 'two-columns' );
-	$show_menu   = get_theme_mod( 'turbo_footer_bar_menu', false );
-	$show_social = get_theme_mod( 'turbo_footer_social_enable', false );
+function helloturbo_theme_footer_bar() {
+	$left        = get_theme_mod( 'helloturbo_copyright_text_left', __( 'Copyright {year} {site_title}. All rights reserved.', 'helloturbo' ) );
+	$right       = get_theme_mod( 'helloturbo_copyright_text_right', __( 'Powered by HelloTurbo', 'helloturbo' ) );
+	$layout      = get_theme_mod( 'helloturbo_footer_bar_layout', 'two-columns' );
+	$show_menu   = get_theme_mod( 'helloturbo_footer_bar_menu', false );
+	$show_social = get_theme_mod( 'helloturbo_footer_social_enable', false );
 
 	if ( ! $left && ! $right && ! $show_menu && ! $show_social ) {
 		return;
 	}
 	?>
-	<div class="turbo-footer-bar turbo-footer-bar--<?php echo esc_attr( $layout ); ?>">
-		<div class="turbo-container">
-			<div class="turbo-footer-bar-inner">
-				<div class="turbo-footer-bar-left">
+	<div class="helloturbo-footer-bar helloturbo-footer-bar--<?php echo esc_attr( $layout ); ?>">
+		<div class="helloturbo-container">
+			<div class="helloturbo-footer-bar-inner">
+				<div class="helloturbo-footer-bar-left">
 					<?php
 					if ( $show_menu && has_nav_menu( 'footer' ) ) {
 						wp_nav_menu(
 							array(
 								'theme_location' => 'footer',
 								'container'      => false,
-								'menu_class'     => 'turbo-footer-menu',
+								'menu_class'     => 'helloturbo-footer-menu',
 								'depth'          => 1,
 								'fallback_cb'    => false,
 							)
 						);
 					}
 					if ( $left ) {
-						echo '<div class="turbo-footer-copyright">' . wp_kses_post( turbo_replace_copyright_tags( $left ) ) . '</div>';
+						echo '<div class="helloturbo-footer-copyright">' . wp_kses_post( helloturbo_replace_copyright_tags( $left ) ) . '</div>';
 					}
 					?>
 				</div>
-				<div class="turbo-footer-bar-right">
+				<div class="helloturbo-footer-bar-right">
 					<?php
 					if ( $right ) {
-						echo '<div class="turbo-footer-credit">' . wp_kses_post( turbo_replace_copyright_tags( $right ) ) . '</div>';
+						echo '<div class="helloturbo-footer-credit">' . wp_kses_post( helloturbo_replace_copyright_tags( $right ) ) . '</div>';
 					}
 					if ( $show_social ) {
-						turbo_render_social_icons();
+						helloturbo_render_social_icons();
 					}
 					?>
 				</div>
@@ -226,4 +226,4 @@ function turbo_theme_footer_bar() {
 	</div>
 	<?php
 }
-add_action( 'turbo_theme_after_footer', 'turbo_theme_footer_bar' );
+add_action( 'helloturbo_theme_after_footer', 'helloturbo_theme_footer_bar' );

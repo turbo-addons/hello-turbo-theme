@@ -10,21 +10,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'turbo-single-post' ); ?>>
-	<header class="turbo-entry-header">
-		<?php the_title( '<h1 class="turbo-entry-title">', '</h1>' ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'helloturbo-single-post' ); ?>>
+	<header class="helloturbo-entry-header">
+		<?php the_title( '<h1 class="helloturbo-entry-title">', '</h1>' ); ?>
 
-		<div class="turbo-entry-meta">
-			<span class="turbo-posted-on">
+		<div class="helloturbo-entry-meta">
+			<span class="helloturbo-posted-on">
 				<time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
 					<?php echo esc_html( get_the_date() ); ?>
 				</time>
 			</span>
-			<span class="turbo-posted-by">
+			<span class="helloturbo-posted-by">
 				<?php echo esc_html( get_the_author() ); ?>
 			</span>
 			<?php if ( has_category() ) : ?>
-				<span class="turbo-post-categories">
+				<span class="helloturbo-post-categories">
 					<?php the_category( ', ' ); ?>
 				</span>
 			<?php endif; ?>
@@ -32,12 +32,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</header>
 
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="turbo-featured-image">
+		<div class="helloturbo-featured-image">
 			<?php the_post_thumbnail( 'large' ); ?>
 		</div>
 	<?php endif; ?>
 
-	<div class="turbo-entry-content">
+	<div class="helloturbo-entry-content">
 		<?php
 		the_content(
 			sprintf(
@@ -56,11 +56,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 	</div>
 
-	<footer class="turbo-entry-footer">
+	<footer class="helloturbo-entry-footer">
 		<?php
-		$turbo_tags = get_the_tag_list( '', esc_html_x( ', ', 'tag separator', 'helloturbo' ) );
-		if ( $turbo_tags ) {
-			printf( '<span class="turbo-tags-links">%s: %s</span>', esc_html__( 'Tags', 'helloturbo' ), $turbo_tags ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		$helloturbo_tags = get_the_tag_list( '', esc_html_x( ', ', 'tag separator', 'helloturbo' ) );
+		if ( $helloturbo_tags ) {
+			printf( '<span class="helloturbo-tags-links">%s: %s</span>', esc_html__( 'Tags', 'helloturbo' ), $helloturbo_tags ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 		?>
 	</footer>

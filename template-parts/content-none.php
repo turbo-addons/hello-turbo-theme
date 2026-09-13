@@ -10,12 +10,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="turbo-no-results">
-	<header class="turbo-page-header">
-		<h1 class="turbo-page-title"><?php esc_html_e( 'Nothing Found', 'helloturbo' ); ?></h1>
+<section class="helloturbo-no-results">
+	<header class="helloturbo-page-header">
+		<h1 class="helloturbo-page-title"><?php esc_html_e( 'Nothing Found', 'helloturbo' ); ?></h1>
 	</header>
 
-	<div class="turbo-page-content">
+	<div class="helloturbo-page-content">
 		<?php if ( is_search() ) : ?>
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'helloturbo' ); ?></p>
 			<?php get_search_form(); ?>

@@ -14,13 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param WP_Customize_Manager $wp_customize Customizer manager instance.
  */
-function turbo_customizer_social_icons( $wp_customize ) {
+function helloturbo_customizer_social_icons( $wp_customize ) {
 
 	$wp_customize->add_section(
-		'turbo_social',
+		'helloturbo_social',
 		array(
 			'title'    => __( 'Social Icons', 'helloturbo' ),
-			'panel'    => 'turbo_footer_builder',
+			'panel'    => 'helloturbo_footer_builder',
 			'priority' => 30,
 		)
 	);
@@ -35,20 +35,20 @@ function turbo_customizer_social_icons( $wp_customize ) {
 
 	foreach ( $networks as $slug => $label ) {
 		$wp_customize->add_setting(
-			"turbo_social_{$slug}",
+			"helloturbo_social_{$slug}",
 			array(
 				'default'           => '',
 				'sanitize_callback' => 'esc_url_raw',
 			)
 		);
 		$wp_customize->add_control(
-			"turbo_social_{$slug}",
+			"helloturbo_social_{$slug}",
 			array(
 				'label'   => $label,
-				'section' => 'turbo_social',
+				'section' => 'helloturbo_social',
 				'type'    => 'url',
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'turbo_customizer_social_icons' );
+add_action( 'customize_register', 'helloturbo_customizer_social_icons' );

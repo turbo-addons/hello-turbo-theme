@@ -14,25 +14,25 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param WP_Customize_Manager $wp_customize Customizer manager instance.
  */
-function turbo_customizer_global_buttons( $wp_customize ) {
+function helloturbo_customizer_global_buttons( $wp_customize ) {
 
 	$wp_customize->add_section(
-		'turbo_global_buttons',
+		'helloturbo_global_buttons',
 		array(
 			'title'    => __( 'Buttons', 'helloturbo' ),
-			'panel'    => 'turbo_global',
+			'panel'    => 'helloturbo_global',
 			'priority' => 30,
 		)
 	);
 
 	// Colors.
 	$btn_colors = array(
-		'turbo_btn_color'              => array( '#ffffff', __( 'Button Text Color', 'helloturbo' ) ),
-		'turbo_btn_bg'                 => array( '#2563eb', __( 'Button Background', 'helloturbo' ) ),
-		'turbo_btn_hover_color'        => array( '#ffffff', __( 'Button Hover Text', 'helloturbo' ) ),
-		'turbo_btn_hover_bg'           => array( '#1e40af', __( 'Button Hover Background', 'helloturbo' ) ),
-		'turbo_btn_border_color'       => array( '#2563eb', __( 'Button Border Color', 'helloturbo' ) ),
-		'turbo_btn_hover_border_color' => array( '#1e40af', __( 'Button Hover Border', 'helloturbo' ) ),
+		'helloturbo_btn_color'              => array( '#ffffff', __( 'Button Text Color', 'helloturbo' ) ),
+		'helloturbo_btn_bg'                 => array( '#2563eb', __( 'Button Background', 'helloturbo' ) ),
+		'helloturbo_btn_hover_color'        => array( '#ffffff', __( 'Button Hover Text', 'helloturbo' ) ),
+		'helloturbo_btn_hover_bg'           => array( '#1e40af', __( 'Button Hover Background', 'helloturbo' ) ),
+		'helloturbo_btn_border_color'       => array( '#2563eb', __( 'Button Border Color', 'helloturbo' ) ),
+		'helloturbo_btn_hover_border_color' => array( '#1e40af', __( 'Button Hover Border', 'helloturbo' ) ),
 	);
 
 	foreach ( $btn_colors as $id => $data ) {
@@ -49,7 +49,7 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 				$id,
 				array(
 					'label'   => $data[1],
-					'section' => 'turbo_global_buttons',
+					'section' => 'helloturbo_global_buttons',
 				)
 			)
 		);
@@ -57,17 +57,17 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 
 	// Border radius.
 	$wp_customize->add_setting(
-		'turbo_btn_radius',
+		'helloturbo_btn_radius',
 		array(
 			'default'           => 4,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_btn_radius',
+		'helloturbo_btn_radius',
 		array(
 			'label'       => __( 'Border Radius (px)', 'helloturbo' ),
-			'section'     => 'turbo_global_buttons',
+			'section'     => 'helloturbo_global_buttons',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 0,
@@ -79,17 +79,17 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 
 	// Border width.
 	$wp_customize->add_setting(
-		'turbo_btn_border_width',
+		'helloturbo_btn_border_width',
 		array(
 			'default'           => 0,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_btn_border_width',
+		'helloturbo_btn_border_width',
 		array(
 			'label'       => __( 'Border Width (px)', 'helloturbo' ),
-			'section'     => 'turbo_global_buttons',
+			'section'     => 'helloturbo_global_buttons',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 0,
@@ -101,17 +101,17 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 
 	// Padding.
 	$wp_customize->add_setting(
-		'turbo_btn_padding_v',
+		'helloturbo_btn_padding_v',
 		array(
 			'default'           => 12,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_btn_padding_v',
+		'helloturbo_btn_padding_v',
 		array(
 			'label'       => __( 'Button Vertical Padding (px)', 'helloturbo' ),
-			'section'     => 'turbo_global_buttons',
+			'section'     => 'helloturbo_global_buttons',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 4,
@@ -122,17 +122,17 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'turbo_btn_padding_h',
+		'helloturbo_btn_padding_h',
 		array(
 			'default'           => 24,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_btn_padding_h',
+		'helloturbo_btn_padding_h',
 		array(
 			'label'       => __( 'Button Horizontal Padding (px)', 'helloturbo' ),
-			'section'     => 'turbo_global_buttons',
+			'section'     => 'helloturbo_global_buttons',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 8,
@@ -144,17 +144,17 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 
 	// Font size.
 	$wp_customize->add_setting(
-		'turbo_btn_font_size',
+		'helloturbo_btn_font_size',
 		array(
 			'default'           => 15,
 			'sanitize_callback' => 'absint',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_btn_font_size',
+		'helloturbo_btn_font_size',
 		array(
 			'label'       => __( 'Button Font Size (px)', 'helloturbo' ),
-			'section'     => 'turbo_global_buttons',
+			'section'     => 'helloturbo_global_buttons',
 			'type'        => 'number',
 			'input_attrs' => array(
 				'min'  => 10,
@@ -166,17 +166,17 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 
 	// Font weight.
 	$wp_customize->add_setting(
-		'turbo_btn_font_weight',
+		'helloturbo_btn_font_weight',
 		array(
 			'default'           => '500',
-			'sanitize_callback' => 'turbo_sanitize_font_weight',
+			'sanitize_callback' => 'helloturbo_sanitize_font_weight',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_btn_font_weight',
+		'helloturbo_btn_font_weight',
 		array(
 			'label'   => __( 'Button Font Weight', 'helloturbo' ),
-			'section' => 'turbo_global_buttons',
+			'section' => 'helloturbo_global_buttons',
 			'type'    => 'select',
 			'choices' => array(
 				'400' => '400',
@@ -189,17 +189,17 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 
 	// Text transform.
 	$wp_customize->add_setting(
-		'turbo_btn_text_transform',
+		'helloturbo_btn_text_transform',
 		array(
 			'default'           => 'none',
-			'sanitize_callback' => 'turbo_sanitize_text_transform',
+			'sanitize_callback' => 'helloturbo_sanitize_text_transform',
 		)
 	);
 	$wp_customize->add_control(
-		'turbo_btn_text_transform',
+		'helloturbo_btn_text_transform',
 		array(
 			'label'   => __( 'Button Text Transform', 'helloturbo' ),
-			'section' => 'turbo_global_buttons',
+			'section' => 'helloturbo_global_buttons',
 			'type'    => 'select',
 			'choices' => array(
 				'none'       => 'None',
@@ -209,4 +209,4 @@ function turbo_customizer_global_buttons( $wp_customize ) {
 		)
 	);
 }
-add_action( 'customize_register', 'turbo_customizer_global_buttons' );
+add_action( 'customize_register', 'helloturbo_customizer_global_buttons' );

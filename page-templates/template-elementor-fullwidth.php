@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content turbo-elementor-fullwidth" tabindex="-1">
+<main id="primary" class="helloturbo-main-content helloturbo-elementor-fullwidth" tabindex="-1">
 	<?php
 	while ( have_posts() ) :
 		the_post();

@@ -14,14 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content" tabindex="-1">
-	<div class="turbo-entry-content">
+<main id="primary" class="helloturbo-main-content" tabindex="-1">
+	<div class="helloturbo-entry-content">
 		<?php woocommerce_content(); ?>
 	</div>
 </main>
 
 <?php
-if ( 'none' !== turbo_get_current_sidebar_layout() ) {
+if ( 'none' !== helloturbo_get_current_sidebar_layout() ) {
 	get_sidebar();
 }
 get_footer();

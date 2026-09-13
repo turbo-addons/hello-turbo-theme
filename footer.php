@@ -9,36 +9,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-		</div><!-- .turbo-container -->
+		</div><!-- .helloturbo-container -->
 	</div><!-- #content -->
 
 	<?php
 	/**
-	 * Hook: turbo_theme_before_footer.
+	 * Hook: helloturbo_theme_before_footer.
 	 */
-	do_action( 'turbo_theme_before_footer' );
+	do_action( 'helloturbo_theme_before_footer' );
 	?>
 
-	<?php if ( apply_filters( 'turbo_theme_show_default_footer', true ) ) : ?>
-		<footer id="colophon" class="turbo-footer">
+	<?php if ( apply_filters( 'helloturbo_theme_show_default_footer', true ) ) : ?>
+		<footer id="colophon" class="helloturbo-footer">
 			<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
-				<div class="turbo-footer-widgets">
-					<div class="turbo-container">
-						<div class="turbo-footer-widgets-grid turbo-footer-col-<?php echo esc_attr( get_theme_mod( 'turbo_footer_columns', '4' ) ); ?>">
+				<div class="helloturbo-footer-widgets">
+					<div class="helloturbo-container">
+						<div class="helloturbo-footer-widgets-grid helloturbo-footer-col-<?php echo esc_attr( get_theme_mod( 'helloturbo_footer_columns', '4' ) ); ?>">
 							<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
-								<div class="turbo-footer-widget-area">
+								<div class="helloturbo-footer-widget-area">
 									<?php dynamic_sidebar( 'footer-1' ); ?>
 								</div>
 							<?php endif; ?>
 
 							<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
-								<div class="turbo-footer-widget-area">
+								<div class="helloturbo-footer-widget-area">
 									<?php dynamic_sidebar( 'footer-2' ); ?>
 								</div>
 							<?php endif; ?>
 
 							<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
-								<div class="turbo-footer-widget-area">
+								<div class="helloturbo-footer-widget-area">
 									<?php dynamic_sidebar( 'footer-3' ); ?>
 								</div>
 							<?php endif; ?>
@@ -51,9 +51,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php
 	/**
-	 * Hook: turbo_theme_after_footer.
+	 * Hook: helloturbo_theme_after_footer.
 	 */
-	do_action( 'turbo_theme_after_footer' );
+	do_action( 'helloturbo_theme_after_footer' );
 	?>
 
 </div><!-- #page -->

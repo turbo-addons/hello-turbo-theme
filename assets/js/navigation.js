@@ -1,5 +1,5 @@
 /**
- * Turbo Theme Frontend Navigation.
+ * HelloTurbo Theme Frontend Navigation.
  *
  * Mobile menu toggle, submenus, sticky header, off-canvas support.
  */
@@ -17,8 +17,8 @@
      * Mobile menu toggle.
      */
     function initMobileMenu() {
-        var toggle = document.querySelector('.turbo-menu-toggle');
-        var nav = document.querySelector('.turbo-main-navigation');
+        var toggle = document.querySelector('.helloturbo-menu-toggle');
+        var nav = document.querySelector('.helloturbo-main-navigation');
         var menu = document.querySelector('#primary-menu');
 
         if (!toggle || !nav) return;
@@ -27,7 +27,7 @@
             var expanded = toggle.getAttribute('aria-expanded') === 'true';
             toggle.setAttribute('aria-expanded', String(!expanded));
             nav.classList.toggle('is-open');
-            document.body.classList.toggle('turbo-mobile-menu-open');
+            document.body.classList.toggle('helloturbo-mobile-menu-open');
 
             // Trap focus inside mobile menu when open.
             if (!expanded && menu) {
@@ -41,7 +41,7 @@
             if (e.key === 'Escape' && nav.classList.contains('is-open')) {
                 toggle.setAttribute('aria-expanded', 'false');
                 nav.classList.remove('is-open');
-                document.body.classList.remove('turbo-mobile-menu-open');
+                document.body.classList.remove('helloturbo-mobile-menu-open');
                 toggle.focus();
             }
         });
@@ -53,7 +53,7 @@
                 !toggle.contains(e.target)) {
                 toggle.setAttribute('aria-expanded', 'false');
                 nav.classList.remove('is-open');
-                document.body.classList.remove('turbo-mobile-menu-open');
+                document.body.classList.remove('helloturbo-mobile-menu-open');
             }
         });
     }
@@ -62,7 +62,7 @@
      * Submenu dropdown handling (keyboard + touch).
      */
     function initSubMenus() {
-        var menuItems = document.querySelectorAll('.turbo-nav-menu .menu-item-has-children');
+        var menuItems = document.querySelectorAll('.helloturbo-nav-menu .menu-item-has-children');
 
         menuItems.forEach(function (item) {
             var link = item.querySelector(':scope > a');
@@ -72,7 +72,7 @@
 
             // Add dropdown arrow.
             var arrow = document.createElement('button');
-            arrow.className = 'turbo-submenu-toggle';
+            arrow.className = 'helloturbo-submenu-toggle';
             arrow.setAttribute('aria-expanded', 'false');
             arrow.setAttribute('aria-label', 'Toggle submenu');
             arrow.innerHTML = '<svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>';
@@ -83,7 +83,7 @@
                 e.preventDefault();
                 e.stopPropagation();
                 var isOpen = arrow.getAttribute('aria-expanded') === 'true';
-                closeAllSubmenus(item.closest('.turbo-nav-menu'), item);
+                closeAllSubmenus(item.closest('.helloturbo-nav-menu'), item);
                 arrow.setAttribute('aria-expanded', String(!isOpen));
                 item.classList.toggle('submenu-open');
             });
@@ -99,6 +99,7 @@
             // Desktop hover (only above mobile breakpoint).
             item.addEventListener('mouseenter', function () {
                 if (window.innerWidth > getMobileBreakpoint()) {
+                    positionSubmenu(item);
                     item.classList.add('submenu-open');
                     arrow.setAttribute('aria-expanded', 'true');
                 }
@@ -110,7 +111,31 @@
                     arrow.setAttribute('aria-expanded', 'false');
                 }
             });
+
+            // Reposition on keyboard focus.
+            item.addEventListener('focusin', function () {
+                if (window.innerWidth > getMobileBreakpoint()) {
+                    positionSubmenu(item);
+                }
+            });
         });
+    }
+
+    /**
+     * Flip a submenu to the right edge if it would overflow the viewport.
+     */
+    function positionSubmenu(item) {
+        var submenu = item.querySelector(':scope > .sub-menu');
+        if (!submenu) return;
+
+        submenu.classList.remove('helloturbo-submenu-right');
+
+        var rect = submenu.getBoundingClientRect();
+        var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+        if (rect.right > viewportWidth) {
+            submenu.classList.add('helloturbo-submenu-right');
+        }
     }
 
     function closeAllSubmenus(menu, except) {
@@ -118,7 +143,7 @@
         menu.querySelectorAll('.submenu-open').forEach(function (item) {
             if (item !== except) {
                 item.classList.remove('submenu-open');
-                var btn = item.querySelector('.turbo-submenu-toggle');
+                var btn = item.querySelector('.helloturbo-submenu-toggle');
                 if (btn) btn.setAttribute('aria-expanded', 'false');
             }
         });
@@ -126,7 +151,7 @@
 
     function getMobileBreakpoint() {
         var style = getComputedStyle(document.documentElement);
-        var bp = style.getPropertyValue('--turbo-mobile-break');
+        var bp = style.getPropertyValue('--helloturbo-mobile-break');
         return bp ? parseInt(bp, 10) : 992;
     }
 
@@ -134,8 +159,8 @@
      * Sticky header.
      */
     function initStickyHeader() {
-        var header = document.querySelector('.turbo-header');
-        if (!header || !header.classList.contains('turbo-sticky')) return;
+        var header = document.querySelector('.helloturbo-header');
+        if (!header || !header.classList.contains('helloturbo-sticky')) return;
 
         var headerHeight = header.offsetHeight;
         var scrollThreshold = headerHeight;
@@ -155,8 +180,8 @@
      * Search icon toggle.
      */
     function initSearchToggle() {
-        var searchToggle = document.querySelector('.turbo-search-toggle');
-        var searchForm = document.querySelector('.turbo-header-search-form');
+        var searchToggle = document.querySelector('.helloturbo-search-toggle');
+        var searchForm = document.querySelector('.helloturbo-header-search-form');
 
         if (!searchToggle || !searchForm) return;
 

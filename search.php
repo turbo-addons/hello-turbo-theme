@@ -12,11 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<main id="primary" class="turbo-main-content" tabindex="-1">
+<main id="primary" class="helloturbo-main-content" tabindex="-1">
 	<?php if ( have_posts() ) : ?>
 
-		<header class="turbo-page-header">
-			<h1 class="turbo-page-title">
+		<header class="helloturbo-page-header">
+			<h1 class="helloturbo-page-title">
 				<?php
 				printf(
 					/* translators: %s: search query */
@@ -27,7 +27,7 @@ get_header();
 			</h1>
 		</header>
 
-		<div class="turbo-posts-grid">
+		<div class="helloturbo-posts-grid">
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -36,7 +36,7 @@ get_header();
 			?>
 		</div>
 
-		<nav class="turbo-pagination" aria-label="<?php esc_attr_e( 'Search results navigation', 'helloturbo' ); ?>">
+		<nav class="helloturbo-pagination" aria-label="<?php esc_attr_e( 'Search results navigation', 'helloturbo' ); ?>">
 			<?php the_posts_pagination(); ?>
 		</nav>
 
@@ -48,7 +48,7 @@ get_header();
 </main>
 
 <?php
-if ( 'none' !== turbo_get_current_sidebar_layout() ) {
+if ( 'none' !== helloturbo_get_current_sidebar_layout() ) {
 	get_sidebar();
 }
 get_footer();

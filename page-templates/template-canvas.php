@@ -21,11 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'turbo-canvas' ); ?>>
+<body <?php body_class( 'helloturbo-canvas' ); ?>>
 <?php wp_body_open(); ?>
 
-<div id="page" class="turbo-site turbo-canvas-page">
-	<main id="primary" class="turbo-main-content" tabindex="-1">
+<div id="page" class="helloturbo-site helloturbo-canvas-page">
+	<main id="primary" class="helloturbo-main-content" tabindex="-1">
 		<?php
 		while ( have_posts() ) :
 			the_post();
